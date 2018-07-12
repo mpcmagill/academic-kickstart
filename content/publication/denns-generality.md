@@ -1,4 +1,4 @@
-+++
+---
 
 title: "Neural Networks Trained to Solve Differential Equations Learn General Representations"
 
@@ -9,7 +9,7 @@ draft: false
 authors = ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
 
 
-+++
+---
 
 
 
