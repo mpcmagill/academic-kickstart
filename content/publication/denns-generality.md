@@ -38,7 +38,7 @@ projects = []
 
 # Links (optional).
 url_pdf = "pdf/my-paper-name.pdf"
-url_preprint = ""
+url_preprint = "https://arxiv.org/abs/1807.00042"
 url_code = ""
 url_dataset = ""
 url_project = ""
@@ -60,8 +60,8 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption 😄"
+image = "denns-generality-thumbnail.png"
+caption = "The first 27 of 192 canonical components from the first layers of trained networks. The first 9 span the general representation learned consistently across random initializations and varying problem parameters."
 
 
 +++
