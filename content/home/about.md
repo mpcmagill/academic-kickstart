@@ -45,5 +45,5 @@ As part of an international collaboration studying [nanoscale preconfinement of 
 That work was published as the cover article of Nano Letters.
 In his master's thesis, Martin studied [the translocation of polymers through a nanofluidic device consisting of two nanopores connected by a nanocavity](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.247802).
 This work was published in Physical Review Letters and led to a patent.
-During his undergraduate degree, Martin conducted research in nuclear reactor physics at AECL, dark matter detection at SNOLAB, [machine learning for cosmic ray tomography](https://ieeexplore.ieee.org/abstract/document/6551067/), and computational fluid dynamics under the supervision of [Prof. Marek Stastna](https://www.math.uwaterloo.ca/~mmstastn/Marek%27s%20home/Welcome.html).
+During his undergraduate degree, Martin conducted research in nuclear reactor physics at AECL, dark matter detection at SNOLAB, [machine learning for cosmic ray tomography](https://ieeexplore.ieee.org/abstract/document/6551067/), and fluid dynamics under the supervision of [Prof. Marek Stastna](https://www.math.uwaterloo.ca/~mmstastn/Marek%27s%20home/Welcome.html).
 
