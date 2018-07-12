@@ -20,6 +20,10 @@ authors = ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
 # 6 = Book chapter
 publication_types = ["3"]
 
+# Publication name and optional abbreviated version.
+publication = "Currently available on arXiv."
+publication_short = ""
+
 # Abstract and optional shortened version.
 abstract = "We introduce a technique based on the singular vector canonical correlation analysis (SVCCA) for measuring the generality of neural network layers across a continuously-parametrized set of tasks. We illustrate this method by studying generality in neural networks trained to solve parametrized boundary value problems based on the Poisson partial differential equation. We find that the first hidden layer is general, and that deeper layers are successively more specific. Next, we validate our method against an existing technique that measures layer generality using transfer learning experiments. We find excellent agreement between the two methods, and note that our method is much faster, particularly for continuously-parametrized problems. Finally, we visualize the general representations of the first layers, and interpret them as generalized coordinates over the input domain."
 abstract_short = "We studied the internal structure of deep neural networks trained to solve a parametrized family of boundary value problems. Using the SVCCA, we showed that the first layers reliably discover generalized coordinates over the input domain. These representations are general over a range of problem parameters."
