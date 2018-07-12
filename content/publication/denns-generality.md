@@ -21,7 +21,7 @@ authors = ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
 publication_types = ["3"]
 
 # Publication name and optional abbreviated version.
-publication = "Currently available on arXiv."
+publication = "Currently available on arXiv"
 publication_short = ""
 
 # Abstract and optional shortened version.
