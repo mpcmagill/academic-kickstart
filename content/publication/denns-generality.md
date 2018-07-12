@@ -1,15 +1,16 @@
----
++++
 
-title: "Neural Networks Trained to Solve Differential Equations Learn General Representations"
+title = "Neural Networks Trained to Solve Differential Equations Learn General Representations"
 
-date: 2018-07-02
+date = 2018-07-02
 
-draft: false
+draft = false
 
-authors: ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
+authors = ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
 
 
----
+
++++
 
 
 
