@@ -41,9 +41,9 @@ He is also using these mathematical problems as a controlled setting in which to
 For instance, by studying the internal structure of deep neural networks trained to solve a parametrized family of boundary value problems, Martin demonstrated that [these networks can learn general representations](https://arxiv.org/abs/1807.00042) that are robust even across variations in the problem parameters.
 
 Previously, Martin has conducted research across a broad range of areas in computational science and data analysis.
-As part of an international collaboration studying [nanoscale preconfinement of DNA molecules translocating through a nanopore](https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.7b03987), Martin modelled and simulated molecules in the device, and also assisted with the analysis of experimental data.
+As part of an international collaboration studying [nanoscale preconfinement of DNA molecules translocating through a nanopore](https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.7b03987), Martin modelled and simulated molecules in the device, and assisted with the analysis of experimental data.
 That work was published as the cover article of Nano Letters.
 In his master's thesis, Martin studied [the translocation of polymers through a nanofluidic device consisting of two nanopores connected by a nanocavity](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.247802).
 This work was published in Physical Review Letters and led to a patent.
-During his undergraduate degree, Martin conducted research in nuclear reactor physics at Canadian Nuclear Laboratories (formerly Atomic Energy of Canada Limited), dark matter physics at SNOLAB, [machine learning for cosmic ray tomography](https://ieeexplore.ieee.org/abstract/document/6551067/) with the CRIPT project, and computational fluid dynamics under the supervision of [Prof. Marek Stastna](https://www.math.uwaterloo.ca/~mmstastn/Marek%27s%20home/Welcome.html).
+During his undergraduate degree, Martin conducted research in nuclear reactor physics at AECL, dark matter physics at SNOLAB, [machine learning for cosmic ray tomography](https://ieeexplore.ieee.org/abstract/document/6551067/), and computational magnetohydrodynamics under the supervision of [Prof. Marek Stastna](https://www.math.uwaterloo.ca/~mmstastn/Marek%27s%20home/Welcome.html).
 
