@@ -6,7 +6,7 @@ date: 2018-07-02
 
 draft: false
 
-authors = ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
+authors: ["Martin Magill","Faisal Qureshi","Hendrick W. de Haan"]
 
 
 ---
