@@ -35,7 +35,9 @@ weight = 5
 
 # Biography
 
-Martin Magill is a PhD student in modelling and computational science at UOIT's [cNAB.LAB](https://faculty.uoit.ca/dehaan/cNAB.LAB/about.shtml) for computational nanobiophysics. His research interests include modelling and simulating first passage problems in computational nanobiophysics. Recently, he has been exploring the use of deep neural networks for solving the partial differential equations that describe electric fields and particle transport through nanofluidic devices.
+Martin Magill is a PhD student in modelling and computational science at UOIT's [cNAB.LAB](https://faculty.uoit.ca/dehaan/cNAB.LAB/about.shtml) for computational nanobiophysics. His research interests include modelling and simulating the behaviour of molecules at the nanoscale. Recently, he has been exploring the use of deep neural networks for solving the partial differential equations (PDEs) that describe electric fields and molecular transport through nanofluidic devices.
 
-The appeal of this study is twofold. First, neural networks have diverse advantages over traditional PDE solvers, especially in high-dimensional problems. Second, provides a controlled environment in which to study neural networks themselves.
+The appeal of this study is twofold. First, neural networks have diverse advantages over traditional PDE solution methods. For instance, neural network solutions are closed analytic expressions. They do not require a mesh, and typically consume less memory than traditional methods. These advantages make them especially appealing for solving higher-dimensional problems, as well as for GPU-accelerated computation.
+
+Conversely, the study of neural networks that solve PDEs presents a platform from which to study the mysterious dynamics of deep learning. Traditional applications of deep learning, such as machine vision and natural language processing, consist of difficult problems whose solutions are not well-understood ahead of time. On the other hand, there exists an enormous body of knowledge regarding to solution of PDEs. 
 
