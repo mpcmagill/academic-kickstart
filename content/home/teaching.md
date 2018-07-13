@@ -19,6 +19,7 @@ weight = 60
 Since 2017, I have been working at the Science Caf&eacute;. This is a weekly drop-in session open to all UOIT students where I provide help with mathematics, physics, and computer science courses.
 
 I have been a teaching assistant for the following courses at UOIT:
+
 * Advanced Linear Algebra and Applications (MATH 2055)
 * Discrete Mathematics (MATH 2080/CSCI 2110)
 * Classical Mechanics (PHY 2030)
@@ -28,5 +29,6 @@ I have been a teaching assistant for the following courses at UOIT:
 
 As a teaching assistant, I present recap lectures in tutorials, provide focused help in office hours, and assist with administering and marking assessments.
 I've also had the opportunity to present individual lectures for the following courses:
+
 * Discrete Mathematics (MATH 2080/CSCI 2110) on quadratic forms.
 * Mathematical Physics (PHY 3040) on Bessel functions.
