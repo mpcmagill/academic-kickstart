@@ -16,7 +16,7 @@ weight = 60
 +++
 
 
-* **2017-2018:** Science Caf'{e} --- Drop-in session providing help in mathematics, physics, computer science.
+* **2017-2018:** Science Caf\'e --- Drop-in session providing help in mathematics, physics, computer science.
 * **2018:** Advanced Linear Algebra (MATH2055)
 * **2017:** Discrete Mathematics (MATH2080/CSCI2110)
 
