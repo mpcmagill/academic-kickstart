@@ -21,7 +21,7 @@ authors = ["Kyle Briggs", "Gregory Madejski", "Martin Magill", "Konstantinos Kas
 publication_types = ["3"]
 
 # Publication name and optional abbreviated version.
-publication = "Published on the cover of Nano Letters"
+publication = "Published in Nano Letters"
 publication_short = ""
 
 # Abstract and optional shortened version.
