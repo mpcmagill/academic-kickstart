@@ -12,15 +12,10 @@ weight = 5
   interests = [
     "Computational Nanobiophysics",
     "Differential Equations",
-    "Neural Networks"
+    "Deep Neural Networks"
   ]
 
 # List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD in Modelling and Computational Science"
-  institution = "University of Ontario Institute of Technology"
-  year = "Ongoing"
-
 [[education.courses]]
   course = "MSc in Modelling and Computational Science"
   institution = "University of Ontario Institute of Technology"
