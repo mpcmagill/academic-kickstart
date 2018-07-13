@@ -18,10 +18,10 @@ authors = ["Martin Magill","Cory Falconer","Ed Waller","Hendrick W. de Haan"]
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-publication_types = ["3"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "Published in Physical Review Letters"
+publication = "Physical Review Letters"
 publication_short = ""
 
 # Abstract and optional shortened version.
