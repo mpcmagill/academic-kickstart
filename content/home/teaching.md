@@ -28,7 +28,7 @@ I have been a teaching assistant for the following courses at UOIT:
 * Calculus 1 & 2 (MATH 1010 & 1020)
 * Physics 1 (PHY 1010)
 
-I've also had the opportunity to present individual lectures for the following courses:
+I've also had the opportunity to lecture on the following topics:
 
-* Discrete Mathematics (MATH 2080/CSCI 2110) on quadratic forms.
-* Mathematical Physics (PHY 3040) on Bessel functions.
+* Introducing quadratic forms in Advanced Linear Algebra and Applications (MATH 2055).
+* Introducing Bessel functions in Mathematical Physics (PHY 3040).
