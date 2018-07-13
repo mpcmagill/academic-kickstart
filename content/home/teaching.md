@@ -16,7 +16,7 @@ weight = 60
 +++
 
 
-Since 2017, I have been working at the Science Caf&eacute;, a weekly drop-in session for all UOIT students where I provide help with mathematics, physics, computer science courses.
+Since 2017, I have been working at the Science Caf&eacute;. This is a weekly drop-in session open to all UOIT students where I provide help with mathematics, physics, and computer science courses.
 
 I have been a teaching assistant for the following courses at UOIT:
 * Advanced Linear Algebra and Applications (MATH 2055)
