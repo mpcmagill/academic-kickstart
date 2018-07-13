@@ -16,7 +16,7 @@ weight = 60
 +++
 
 
-Since 2017, I have been working at the UOIT [Science Caf&eacute;](https://www.facebook.com/UOITScienceCafe/). This is a weekly drop-in session open to all UOIT science students. I provide help with mathematics, physics, and computer science courses.
+Since 2017, I have been working at the [UOIT Science Caf&eacute;](https://www.facebook.com/UOITScienceCafe/). This is a weekly drop-in session open to all UOIT science students. I provide help with mathematics, physics, and computer science courses.
 
 I also work as a teaching assistant. This entails reviewing lecture material in tutorials, providing focused help in office hours, and assisting with the administration and marking of assessments.
 I have been a teaching assistant for the following courses at UOIT:
