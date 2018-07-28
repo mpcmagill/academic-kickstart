@@ -42,3 +42,4 @@ In my master's thesis, I studied [the translocation of polymers through a nanofl
 This work was published in Physical Review Letters and led to a patent.
 During my undergraduate degree, I conducted research in nuclear reactor physics at AECL, dark matter detection at SNOLAB, [machine learning for cosmic ray tomography](https://ieeexplore.ieee.org/abstract/document/6551067/), and fluid dynamics under the supervision of [Prof. Marek Stastna](https://www.math.uwaterloo.ca/~mmstastn/Marek%27s%20home/Welcome.html).
 
+{{% staticref "files/MartinMagill.pdf" "newtab" %}}You can download my detailed CV here.{{% /staticref %}}
