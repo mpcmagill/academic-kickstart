@@ -1,7 +1,7 @@
 +++
 title = "Solving Differential Equations Directly with Neural Networks: An Overview"
 date = 2018-08-10
-draft = false
+draft = true
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Martin Magill"]
@@ -39,7 +39,13 @@ Let's start with a general $n$th-order PDE problem given by
 $$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Our goal is to approximate the solution of the problem, $u$, with a neural network.
-I'm going to denote the output of our neural network as $\tilde{u}$.
+I'm going to denote this neural network as $\tilde{u}$.
+
+The usual supervised learning recipe is as follows:
+
+1. Collect a database of input-output pairs that follow the correct solution $u(\vec{x})$.
+2. 
+
 
 Why do we expect this to work?
 
