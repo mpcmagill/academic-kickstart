@@ -1,5 +1,5 @@
 +++
-title = "General Notation for Partial Differential Equations"
+title = "General Notation for Differential Equation Problems"
 date = 2018-08-10
 draft = false
 
