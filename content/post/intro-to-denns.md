@@ -41,6 +41,7 @@ We can also write this partial differential equation (PDE) more succinctly using
 $$\nabla\^2\_{\vec{x}} u(\vec{x}) = 0.$$
 
 As stated above, this problem actually has infinitely many solutions.
-Generally, the problem will also come with *boundary conditions*
+Generally, the problem will also come with *boundary conditions*.
+These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
 
 
