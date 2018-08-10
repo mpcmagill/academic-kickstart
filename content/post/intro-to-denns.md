@@ -43,10 +43,10 @@ I'm going to denote this neural network as $\tilde{u}$.
 
 Nowadays, a common supervised learning recipe is as follows:
 
-1. Collect a database of correct input-output pairs, ${\vec{x}_i,u(\vec{x})_i}$.
-2. Compute the network's naive predictions, ${\vec{x}_i,\tilde{u}(\vec{x})_i}$.
-3. Compute a loss function that describes the network's mistakes in approximating $u$.
-4. Compute the gradient of the loss with respect to the network's internal parameters $\vec{w}$.
+1. Collect a database of correct input-output pairs, $\{\vec{x}_i,u(\vec{x})_i\}$.
+2. Compute the network's naive predictions, $\{\vec{x}_i,\tilde{u}(\vec{x})_i\}$.
+3. Compute a loss function that describes the network's mistakes.
+4. Compute the gradient of the loss w.r.t. the network's parameters $\vec{w}$.
 5. Use gradient descent to modify $\vec{w}$ in a way that should improve performance.
 
 
