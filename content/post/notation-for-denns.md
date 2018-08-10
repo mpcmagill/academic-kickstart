@@ -13,7 +13,7 @@ categories = []
 
 math = true
 
-summary = "This post describes a relatively general notation for discussing differential equation problems."
+summary = "This post describes the notation I'll use elsewhere to discuss differential equation problems."
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
@@ -27,7 +27,7 @@ preview = true
 
 +++
 
-
+This post describes a relatively general notation for discussing differential equation problems of all shapes and sizes.
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
 $$u\_{xx}(x,y) + u\_{yy}(x,y) = 0.$$
