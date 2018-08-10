@@ -39,7 +39,7 @@ selected = true
 projects = []
 
 # Links (optional).
-url_pdf = "pdf/my-paper-name.pdf"
+url_pdf = "files/MM_DLRL2018.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -61,15 +61,15 @@ highlight = true
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-[header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption 😄"
+#[header]
+#image = ""
+#caption = ""
 
 +++
 
 
 
-{{% staticref "files/MM_DLRL2018.pdf" "newtab" %}}Check out the poster I presented at the 2018 DLRL summer school.{{% /staticref %}}
+#{{% staticref "files/MM_DLRL2018.pdf" "newtab" %}}Check out the poster I presented at the 2018 DLRL summer school.{{% /staticref %}}
 
 
 
