@@ -21,7 +21,7 @@ math = true
 [header]
 image = ""
 caption = ""
-preview = true
+preview = false
 
 +++
 
@@ -34,5 +34,5 @@ I'll also try to provide a roadmap of the literature on this subject, which is a
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
-$u_{xx} + u_{yy} = 0$
+$u\_{xx} + u\_{yy} = 0$
 
