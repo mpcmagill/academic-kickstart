@@ -59,18 +59,6 @@ $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
 
-### Boundary conditions
-
-As stated above, this problem actually has infinitely many solutions.
-Generally, PDE problems will also come with **boundary conditions**.
-These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
-For instance, *Dirichlet boundary conditions* state what values the solution must have on $\partial \Omega$.
-On the other hand, *Neumann boundary conditions* state the value of the normal derivative of $u$ on $\partial \Omega$.
-
-In some applications, boundary conditions can get pretty complicated.
-
-
-
 ### Vector-valued solutions
 
 So far, we have talked about $u$ assuming that it is a scalar function.
@@ -85,6 +73,19 @@ For simplicity, the rest of this discussion will continue to talk about scalar s
 **Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
 For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
 In other words, the rest of this discussion applies directly to ODEs as well as PDEs.
+
+
+### Boundary conditions
+
+On their own, most PDEs actually have infinitely many solutions.
+Generally, PDE problems will also come with **boundary conditions** (BCs).
+These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
+For instance, *Dirichlet BCs* state what values the solution must have on $\partial \Omega$.
+On the other hand, *Neumann BCs* state the value of the normal derivative of $u$ on $\partial \Omega$.
+
+In some applications, boundary conditions can get pretty complicated.
+For the present discussion, we will denote general BCs as
+$$B[u](\vec{x}) = 0\text{ for }\vec{x}\in\partial\Omega.$$
 
 
 
