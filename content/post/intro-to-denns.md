@@ -30,11 +30,11 @@ In this post, I'm going to give a brief overview on using neural networks to lea
 I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
-### A 
+### Examples of Differential Equation Problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
-\begin{align}
+$$
 u_{xx} + u_{yy} = 0
-\end{align}
+$$
 
