@@ -34,5 +34,13 @@ I'll also try to provide a roadmap of the literature on this subject, which is a
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
-$u\_{xx} + u\_{yy} = 0$
+$$u\_{xx}(x,y) + u\_{yy}(x,y) = 0$$.
+Here, $x$ and $y$ are coordinates of some vector $\vec{x}$ in a domain $\Omega$.
+The problem is to find the function $u(\vec{x})$ that satisfies Laplace's equation everywhere in $\Omega$.
+We can also write the problem more succinctly using $\nabla$,
+$$\nabla\_{\vec{x}} u(\vec{x}) = 0$$
+
+As stated above, this problem actually has infinitely many solutions.
+Generally, the problem will also come with *boundary conditions*
+
 
