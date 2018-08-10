@@ -13,6 +13,8 @@ categories = []
 
 math = true
 
+summary = "This post contains a brief overview on solving PDE problems directly using neural networks, including an introduction to relevant literature."
+
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 # Use `caption` to display an image caption.
