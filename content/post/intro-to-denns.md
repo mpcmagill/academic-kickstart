@@ -58,7 +58,7 @@ This turns out to be a good way to accelerate certain expensive simulations, suc
 * A variety of quantum mechanical simulations ([Behler et al. ????](), [Isaac's group](), and many others)
 
 However, the technique I am discussing here is based on the key realizations that we don't *need* input-output pairs in order to solve the PDE.
-Indeed, the problem statement itself (i.e. the choice of  tells us everything we need to know to find the 
+Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 
 
 Why do we expect this to work?
