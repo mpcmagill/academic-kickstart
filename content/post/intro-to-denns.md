@@ -48,7 +48,7 @@ For instance, a simple version of the heat equation is
 $$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t),$$
 where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
 A simple version of the convection-diffusion equation is
-$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla} u(\vec{x},t),$$
+$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t),$$
 where $\vec{v}(\vec{x})$ is some fixed function.
 
 In both of these cases, the equations contain a mixture of spatial derivatives and derivatives with respect to time.
