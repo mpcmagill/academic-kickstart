@@ -41,15 +41,14 @@ We can also write this partial differential equation (PDE) more succinctly using
 $$\nabla^2 u(\vec{x}) = 0.$$
 
 Most PDEs are more complicated than Laplace's equation.
-For instance, Poisson's equation is
-$$\nabla^2 u(\vec{x}) = s(\vec{x})$$
-for some function $s(\vec{x})$.
-The simplest form of the heat equation is
+For instance, a simple version of the heat equation is
 $$\nabla^2 u(\vec{x},t) = \frac{\partial u(\vec{x},t)}{\partial t},$$
 where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
+A simple version of the convection-diffusion equation is
+$$\nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t) = \frac{\partial u(\vec{x},t)}{\partial t},$$
+where $\vec{v}(\vec{x})$ is some fixed function.
 
-
-These PDE problems, on their own, actually have infinitely many solutions.
+All of these PDE problems, on their own, generally have infinitely many solutions.
 Generally, PDE problems will also come with *boundary conditions*.
 These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
 For instance, *Dirichlet boundary conditions* states what values the solution must have on $\partial \Omega$.
