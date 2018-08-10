@@ -23,13 +23,10 @@ image = ""
 caption = ""
 preview = false
 
+summary = "This post describes a relatively general notation for discussing partial differential equation problems."
+
 +++
 
-This post describes a relatively general notation for discussing partial differential equation problems.
-
-
-
-# General partial differential equation problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
