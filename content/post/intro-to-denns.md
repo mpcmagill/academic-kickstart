@@ -30,33 +30,59 @@ In this post, I'm going to give a brief overview on using neural networks to lea
 I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
-#### Examples of Differential Equation Problems
+## Examples of differential equation problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
 $$u\_{xx}(x,y) + u\_{yy}(x,y) = 0.$$
 Here, $x$ and $y$ are coordinates of some vector $\vec{x}$ in a domain $\Omega$.
 The problem is to find the function $u(\vec{x})$ that satisfies Laplace's equation everywhere in $\Omega$.
-We can also write this partial differential equation (PDE) more succinctly using $\nabla$, as
-$$\nabla^2 u(\vec{x}) = 0.$$
+We can also write this **partial differential equation** (PDE) more succinctly using $\nabla$, as
+$$\nabla^2\_{\vec{x}} u(\vec{x}) = 0.$$
 
-Most PDEs are more complicated than Laplace's equation.
-For instance, a simple version of the heat equation is
-$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t),$$
-where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
-A simple version of the convection-diffusion equation is
-$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t),$$
-where $\vec{v}(\vec{x})$ is some fixed function.
-We can write down a general $n$th-order PDE as
-$$G(\vec{x'},\nabla u(\vec{x'},\nabla^2 u(\vec{x'}),\ldots,\nabla^n u(\vec{x'}))$$
 
 
 All of these PDE problems, on their own, generally have infinitely many solutions.
-Generally, PDE problems will also come with *boundary conditions*.
+Generally, PDE problems will also come with **boundary conditions**.
 These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
 For instance, *Dirichlet boundary conditions* states what values the solution must have on $\partial \Omega$.
 On the other hand, *Neumann boundary conditions* state the value of the normal derivative of $u$ on $\partial \Omega$.
 
 In some applications, boundary conditions can get pretty complicated.
+
+
+### What about time?
+
+Most PDEs are more complicated than Laplace's equation.
+For instance, a simple version of the heat equation is
+$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2\_{\vec{x}} u(\vec{x},t),$$
+where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
+A simple version of the convection-diffusion equation is
+$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2\_{\vec{x}} u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla\_{\vec{x}} u(\vec{x},t),$$
+where $\vec{v}(\vec{x})$ is some fixed function.
+
+In both of these cases, the equations contain a mixture of spatial derivatives and derivatives with respect to time.
+For present purposes, we can ignore the distinction between space and time.
+It is more convenient to simply think of $u$ as a function of a single combined space-and-time vector $\vec{x}$.
+Then we can write down a general $n$th-order PDE as
+$$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
+
+
+### What about vector-valued solutions?
+
+So far, we have talked about $u$ assuming that it is a scalar function.
+More generally, we might consider PDEs that describe vector or tensor functions $u$.
+For instance, the Navier-Stokes equations describe the evolution of a three-dimensional fluid flow along with its density, pressure, stress tensor, etc.
+These PDEs can still be written in the general form given above, but the derivatives will generally be higher-order tensors.
+For simplicity, the rest of this discussion will continue to talk about scalar solutions $u$.
+
+
+### What about ODEs?
+
+**Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
+For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
+In other words, the rest of this discussion applies directly to ODEs as well as PDEs.
+
 
 
