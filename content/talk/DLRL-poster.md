@@ -5,7 +5,6 @@ draft: false
 ---
 
 
-{{% staticref "files/MM_DLRL2018.pdf" "newtab" %}}Check out the poster I presented at the 2018 DLRL summer school.{{% /staticref %}}
 
 
 
