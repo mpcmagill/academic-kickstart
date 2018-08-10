@@ -47,7 +47,7 @@ Nowadays, a common supervised learning recipe is as follows:
 2. Compute the network's naive predictions, $\{\vec{x}_i,\tilde{u}(\vec{x})_i\}$.
 3. Compute a loss function that describes the network's mistakes.
 4. Compute the gradient of the loss w.r.t. the network's parameters $\vec{w}$.
-5. Use gradient descent to modify $\vec{w}$ in a way that should improve performance.
+5. Use gradient descent to update $\vec{w}$.
 
 
 Why do we expect this to work?
