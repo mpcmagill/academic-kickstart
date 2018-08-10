@@ -88,7 +88,9 @@ For the present discussion, we will denote general BCs as
 $$B[u](\vec{x}) = 0\text{ for }\vec{x}\in\partial\Omega.$$
 For homogeneous Dirichlet BCs, the operator $B$ would be
 $$B[u] = u.$$
-If the BCs require that $u=1$ on the boundary, then $B$ would be
-$$B[u] = u-1.$$
+For homogeneous Neumann BCs, the operator $B$ would be
+$$B[u] = u\_{\hat{n}},$$
+namely the derivative of $u$ in the direction normal to the boundary.
+
 
 
