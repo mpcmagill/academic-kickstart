@@ -59,6 +59,13 @@ $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
 
+### Ordinary differential equations
+
+**Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
+For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
+In other words, the rest of this discussion applies directly to ODEs as well as PDEs.
+
+
 ### Vector-valued solutions
 
 So far, we have talked about $u$ assuming that it is a scalar function.
@@ -66,13 +73,6 @@ More generally, we might consider PDEs that describe vector or tensor functions 
 For instance, the Navier-Stokes equations describe the evolution of a three-dimensional fluid flow along with its density, pressure, stress tensor, etc.
 These PDEs can still be written in the general form given above, but the derivatives will generally be higher-order tensors.
 For simplicity, the rest of this discussion will continue to talk about scalar solutions $u$.
-
-
-### Ordinary differential equations
-
-**Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
-For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
-In other words, the rest of this discussion applies directly to ODEs as well as PDEs.
 
 
 ### Boundary conditions
@@ -85,11 +85,11 @@ On the other hand, *Neumann BCs* state the values of the normal derivative of $u
 
 In some applications, boundary conditions can get pretty complicated.
 For the present discussion, we will denote general BCs as
-$$B[u](\vec{x}) = 0\mathrm{ for }\vec{x}\in\partial\Omega.$$
+$$B\[u\](\vec{x}) = 0\mathrm{ for }\vec{x}\in\partial\Omega.$$
 For homogeneous Dirichlet BCs, the operator $B$ would be
-$$B[u] = u.$$
+$$B\[u\] = u.$$
 For homogeneous Neumann BCs, the operator $B$ would be
-$$B[u] = u\_{\hat{n}},$$
+$$B\[u\] = u\_{\hat{n}},$$
 namely the derivative of $u$ in the direction normal to the boundary.
 
 
