@@ -1,7 +1,7 @@
 +++
 title = "Solving Differential Equations Directly with Neural Networks: An Overview"
 date = 2018-08-10
-draft = true
+draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Martin Magill"]
