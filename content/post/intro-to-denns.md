@@ -59,6 +59,10 @@ Then we can write down a general $n$th-order PDE as
 $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
+I'll note in passing how this relates to non-linear PDEs.
+These are generally a particularly challenging class of equations.
+In the current notation, non-linearity of the PDE amounts to non-linearity of the function $G$.
+
 
 ## Ordinary differential equations
 
@@ -101,11 +105,10 @@ In this section, I introduced the general $n$th-order PDE problem
 $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
-
 In particular, with this notation
 
 * Time is treated on equal footing with spatial variables.
-* ODEs are just special cases of PDEs.
 * Non-linear PDEs are just special choices of $G$.
+* ODEs are just special cases of PDEs.
 * Vector-valued solutions $u$ are no problem.
 * Complicated BCs are captured by the operator $B$.
