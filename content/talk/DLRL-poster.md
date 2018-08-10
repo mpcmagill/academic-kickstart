@@ -1,6 +1,6 @@
 +++
-title = "Example Talk"
-date = 2017-01-01T00:00:00  # Schedule page publish date.
+title = "Poster for the 2018 DLRL Summer School"
+date = 2018-07-25T00:00:00
 draft = false
 
 # Talk start and end times.
@@ -13,11 +13,11 @@ abstract = ""
 abstract_short = ""
 
 # Name of event and optional event URL.
-event = "Academic Theme Conference"
-event_url = "https://example.org"
+event = "2018 DLRL Summer School"
+event_url = ""
 
 # Location of event.
-location = "London, United Kingdom"
+location = "Toronto, ON"
 
 # Is this a selected talk? (true/false)
 selected = false
