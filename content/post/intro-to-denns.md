@@ -37,11 +37,24 @@ One of the simplest boundary value problems of interest is given by the two-dime
 $$u\_{xx}(x,y) + u\_{yy}(x,y) = 0.$$
 Here, $x$ and $y$ are coordinates of some vector $\vec{x}$ in a domain $\Omega$.
 The problem is to find the function $u(\vec{x})$ that satisfies Laplace's equation everywhere in $\Omega$.
-We can also write this partial differential equation (PDE) more succinctly using $\nabla$,
-$$\nabla\^2\_{\vec{x}} u(\vec{x}) = 0.$$
+We can also write this partial differential equation (PDE) more succinctly using $\nabla$, as
+$$\nabla^2 u(\vec{x}) = 0.$$
 
-As stated above, this problem actually has infinitely many solutions.
-Generally, the problem will also come with *boundary conditions*.
+Most PDEs are more complicated than Laplace's equation.
+For instance, Poisson's equation is
+$$\nabla^2 u(\vec{x}) = s(\vec{x})$$
+for some function $s(\vec{x})$.
+The simplest form of the heat equation is
+$$\nabla^2 u(\vec{x},t) = \frac{\partial u(\vec{x},t)}{\partial t},$$
+where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
+
+
+These PDE problems, on their own, actually have infinitely many solutions.
+Generally, PDE problems will also come with *boundary conditions*.
 These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
+For instance, *Dirichlet boundary conditions* states what values the solution must have on $\partial \Omega$.
+On the other hand, *Neumann boundary conditions* state the value of the normal derivative of $u$ on $\partial \Omega$.
+
+In some applications, boundary conditions can get pretty complicated.
 
 
