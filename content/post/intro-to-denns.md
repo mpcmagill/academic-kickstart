@@ -30,7 +30,7 @@ In this post, I'm going to give a brief overview on using neural networks to lea
 I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
-## Examples of differential equation problems
+## Partial differential equation problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
@@ -39,16 +39,6 @@ Here, $x$ and $y$ are coordinates of some vector $\vec{x}$ in a domain $\Omega$.
 The problem is to find the function $u(\vec{x})$ that satisfies Laplace's equation everywhere in $\Omega$.
 We can also write this **partial differential equation** (PDE) more succinctly using $\nabla$, as
 $$\nabla^2} u(\vec{x}) = 0.$$
-
-
-
-All of these PDE problems, on their own, generally have infinitely many solutions.
-Generally, PDE problems will also come with **boundary conditions**.
-These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
-For instance, *Dirichlet boundary conditions* states what values the solution must have on $\partial \Omega$.
-On the other hand, *Neumann boundary conditions* state the value of the normal derivative of $u$ on $\partial \Omega$.
-
-In some applications, boundary conditions can get pretty complicated.
 
 
 ### What about time?
@@ -69,7 +59,19 @@ $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
 
-### What about vector-valued solutions?
+### Boundary conditions
+
+As stated above, this problem actually has infinitely many solutions.
+Generally, PDE problems will also come with **boundary conditions**.
+These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
+For instance, *Dirichlet boundary conditions* state what values the solution must have on $\partial \Omega$.
+On the other hand, *Neumann boundary conditions* state the value of the normal derivative of $u$ on $\partial \Omega$.
+
+In some applications, boundary conditions can get pretty complicated.
+
+
+
+### Vector-valued solutions
 
 So far, we have talked about $u$ assuming that it is a scalar function.
 More generally, we might consider PDEs that describe vector or tensor functions $u$.
@@ -78,7 +80,7 @@ These PDEs can still be written in the general form given above, but the derivat
 For simplicity, the rest of this discussion will continue to talk about scalar solutions $u$.
 
 
-### What about ODEs?
+### Ordinary differential equations
 
 **Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
 For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
