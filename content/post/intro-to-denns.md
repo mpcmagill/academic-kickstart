@@ -30,7 +30,7 @@ In this post, I'm going to give a brief overview on using neural networks to lea
 I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
-## Partial differential equation problems
+# Partial differential equation problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
@@ -85,7 +85,7 @@ On the other hand, *Neumann BCs* state the values of the normal derivative of $u
 
 In some applications, boundary conditions can get pretty complicated.
 For the present discussion, we will denote general BCs as
-$$B\[u\](\vec{x}) = 0\,\mathrm{for}\,\vec{x}\in\partial\Omega.$$
+$$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 For homogeneous Dirichlet BCs, the operator $B$ would be
 $$B\[u\] = u.$$
 For homogeneous Neumann BCs, the operator $B$ would be
