@@ -1,12 +1,57 @@
 +++
 title = "Poster for the 2018 DLRL Summer School"
+date = 2018-07-25
+draft = false
 
-# Date first published.
-date = "2018-07-25"
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+#time_start = {{ .Date }}
+#time_end = {{ .Date }}
 
+# Abstract and optional shortened version.
+abstract = ""
+abstract_short = ""
+
+# Name of event and optional event URL.
+event = "2018 DLRL Summer School"
+event_url = "https://dlrlsummerschool.ca/"
+
+# Location of event.
+location = "Toronto, ON"
+
+# Is this a selected talk? (true/false)
+selected = false
+
+# Projects (optional).
+#   Associate this talk with one or more of your projects.
+#   Simply enter your project's filename without extension.
+#   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
+#   Otherwise, set `projects = []`.
+projects = []
+
+# Tags (optional).
+#   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
+tags = []
+
+# Links (optional).
+url_pdf = "files/MM_DLRL2018.pdf"
+url_slides = ""
+url_video = ""
+url_code = ""
+
+# Does the content use math formatting?
+math = false
+
+# Does the content use source code highlighting?
+highlight = true
+
+# Featured image
+# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
+[header]
+image = ""
+caption = ""
 
 +++
-
 
 
 
