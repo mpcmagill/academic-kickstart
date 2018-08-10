@@ -9,7 +9,7 @@ draft = false
 #time_end = {{ .Date }}
 
 # Abstract and optional shortened version.
-abstract = ""
+abstract = "test"
 abstract_short = ""
 
 # Name of event and optional event URL.
