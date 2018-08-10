@@ -1,23 +1,23 @@
 +++
-title = "Poster for the 2018 DLRL Summer School"
-date = 2018-07-25
+title = "Example Talk"
+date = 2017-01-01T00:00:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 7:00
-#time_end = {{ .Date }}
+time_start = 2030-06-01T13:00:00
+time_end = 2030-06-01T15:00:00
 
 # Abstract and optional shortened version.
-abstract = "test"
+abstract = ""
 abstract_short = ""
 
 # Name of event and optional event URL.
-event = "2018 DLRL Summer School"
-event_url = ""
+event = "Academic Theme Conference"
+event_url = "https://example.org"
 
 # Location of event.
-location = "Toronto"
+location = "London, United Kingdom"
 
 # Is this a selected talk? (true/false)
 selected = false
@@ -34,13 +34,13 @@ projects = []
 tags = []
 
 # Links (optional).
-url_pdf = "files/MM_DLRL2018.pdf"
+url_pdf = ""
 url_slides = ""
 url_video = ""
 url_code = ""
 
 # Does the content use math formatting?
-math = false
+math = true
 
 # Does the content use source code highlighting?
 highlight = true
@@ -49,11 +49,8 @@ highlight = true
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
 image = ""
-caption = ""
+caption = "My caption :smile:"
 
 +++
 
-
-
-
-
+Embed your slides or video here using [shortcodes](https://sourcethemes.com/academic/post/writing-markdown-latex/). Further details can easily be added using *Markdown* and $\rm \LaTeX$ math code.
