@@ -13,6 +13,8 @@ categories = []
 
 math = true
 
+summary = "This post describes a relatively general notation for discussing partial differential equation problems."
+
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 # Use `caption` to display an image caption.
@@ -22,8 +24,6 @@ math = true
 image = ""
 caption = ""
 preview = true
-
-summary = "This post describes a relatively general notation for discussing partial differential equation problems."
 
 +++
 
@@ -96,7 +96,7 @@ namely the derivative of $u$ in the direction normal to the boundary.
 
 ## Recap
 
-In this section, I introduced the general $n$th-order PDE problem
+With this notation, we can denote a general $n$th-order PDE problem as
 $$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
