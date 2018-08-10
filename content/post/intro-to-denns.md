@@ -41,10 +41,13 @@ $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Our goal is to approximate the solution of the problem, $u$, with a neural network.
 I'm going to denote this neural network as $\tilde{u}$.
 
-The usual supervised learning recipe is as follows:
+Nowadays, a common supervised learning recipe is as follows:
 
-1. Collect a database of input-output pairs that follow the correct solution $u(\vec{x})$.
-2. 
+1. Collect a database of correct input-output pairs, ${\vec{x}_i,u(\vec{x})_i}$.
+2. Compute the network's naive predictions, ${\vec{x}_i,\tilde{u}(\vec{x})_i}$.
+3. Compute a loss function that describes the network's mistakes in approximating $u$.
+4. Compute the gradient of the loss with respect to the network's internal parameters $\vec{w}$.
+5. Use gradient descent to modify $\vec{w}$ in a way that should improve performance.
 
 
 Why do we expect this to work?
