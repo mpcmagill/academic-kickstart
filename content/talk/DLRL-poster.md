@@ -14,13 +14,13 @@ abstract_short = ""
 
 # Name of event and optional event URL.
 event = "2018 DLRL Summer School"
-event_url = "https://dlrlsummerschool.ca/"
+event_url = ""
 
 # Location of event.
-location = "Toronto, ON"
+location = "Toronto"
 
 # Is this a selected talk? (true/false)
-selected = false
+selected = true
 
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
