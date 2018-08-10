@@ -13,7 +13,7 @@ categories = []
 
 math = true
 
-summary = "This post describes a relatively general notation for discussing partial differential equation problems."
+summary = "This post describes a relatively general notation for discussing differential equation problems."
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
