@@ -17,8 +17,14 @@ categories = []
 #   Markdown linking is allowed, e.g. `caption = "[Image credit](http://example.org)"`.
 # Set `preview` to `false` to disable the thumbnail in listings.
 [header]
-image = "DENN-schematic.png"
+image = ""
 caption = ""
 preview = true
 
 +++
+
+
+In this post, I'll cover the basic ideas involved in solving differential equations directly using neural networks.
+I'm also going to include a brief overview of the literature on this subject, which is a little fragmented.
+
+
