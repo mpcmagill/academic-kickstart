@@ -27,10 +27,11 @@ preview = false
 
 
 In this post, I'm going to give a brief overview on using neural networks to learn the solutions of differential equations directly.
-I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
+I'll start by introducing the relatively general notation typically used in this application.
+Throughout the post, I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
-# Partial differential equation problems
+# General partial differential equation problems
 
 Let's start with an example.
 One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
@@ -41,7 +42,7 @@ We can also write this **partial differential equation** (PDE) more succinctly u
 $$\nabla^2 u(\vec{x}) = 0.$$
 
 
-### What about time?
+## What about time?
 
 Most PDEs are more complicated than Laplace's equation.
 For instance, a simple version of the heat equation is
@@ -59,14 +60,14 @@ $$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
 
-### Ordinary differential equations
+## Ordinary differential equations
 
 **Ordinary differential equations** (ODEs) are differential equations that only have one independent variable.
 For the present discussion, it is most convenient to think of ODEs as special cases of PDEs where the vector of variables $\vec{x}$ is just a single scalar $x$.
 In other words, the rest of this discussion applies directly to ODEs as well as PDEs.
 
 
-### Vector-valued solutions
+## Vector-valued solutions
 
 So far, we have talked about $u$ assuming that it is a scalar function.
 More generally, we might consider PDEs that describe vector or tensor functions $u$.
@@ -75,7 +76,7 @@ These PDEs can still be written in the general form given above, but the derivat
 For simplicity, the rest of this discussion will continue to talk about scalar solutions $u$.
 
 
-### Boundary conditions
+## Boundary conditions
 
 On their own, most PDEs actually have infinitely many solutions.
 Generally, PDE problems will also come with **boundary conditions** (BCs).
