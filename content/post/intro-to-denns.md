@@ -1,7 +1,7 @@
 +++
 title = "Solving Differential Equations Directly with Neural Networks: An Overview"
 date = 2018-08-10
-draft = false
+draft = true
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Martin Magill"]
@@ -60,7 +60,5 @@ This turns out to be a good way to accelerate certain expensive simulations, suc
 However, the technique I am discussing here is based on the key realization that **we don't need input-output pairs in order to solve the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 
-
-Why do we expect this to work?
 
 
