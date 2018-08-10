@@ -42,11 +42,14 @@ $$\nabla^2 u(\vec{x}) = 0.$$
 
 Most PDEs are more complicated than Laplace's equation.
 For instance, a simple version of the heat equation is
-$$\nabla^2 u(\vec{x},t) = \frac{\partial u(\vec{x},t)}{\partial t},$$
+$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t),$$
 where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
 A simple version of the convection-diffusion equation is
-$$\nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t) = \frac{\partial u(\vec{x},t)}{\partial t},$$
+$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t),$$
 where $\vec{v}(\vec{x})$ is some fixed function.
+We can write down a general $n$th-order PDE as
+$$G(\vec{x'},\nabla u(\vec{x'},\nabla^2 u(\vec{x'}),\ldots,\nabla^n u(\vec{x'}))$$
+
 
 All of these PDE problems, on their own, generally have infinitely many solutions.
 Generally, PDE problems will also come with *boundary conditions*.
