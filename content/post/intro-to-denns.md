@@ -85,7 +85,7 @@ On the other hand, *Neumann BCs* state the values of the normal derivative of $u
 
 In some applications, boundary conditions can get pretty complicated.
 For the present discussion, we will denote general BCs as
-$$B\[u\](\vec{x}) = 0\mathrm{ for }\vec{x}\in\partial\Omega.$$
+$$B\[u\](\vec{x}) = 0\,\mathrm{for}\,\vec{x}\in\partial\Omega.$$
 For homogeneous Dirichlet BCs, the operator $B$ would be
 $$B\[u\] = u.$$
 For homogeneous Neumann BCs, the operator $B$ would be
