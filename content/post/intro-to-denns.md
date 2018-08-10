@@ -56,7 +56,7 @@ In both of these cases, the equations contain a mixture of spatial derivatives a
 For present purposes, we can ignore the distinction between space and time.
 It is more convenient to simply think of $u$ as a function of a single combined space-and-time vector $\vec{x}$.
 Then we can write down a general $n$th-order PDE as
-$$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
 
 I'll note in passing how this relates to non-linear PDEs.
@@ -102,7 +102,7 @@ namely the derivative of $u$ in the direction normal to the boundary.
 ## Recap
 
 In this section, I introduced the general $n$th-order PDE problem
-$$G(\vec{x},\nabla u(\vec{x},\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
 In particular, with this notation
