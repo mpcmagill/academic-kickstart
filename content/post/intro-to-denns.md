@@ -103,7 +103,9 @@ $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
 
 In particular, with this notation
+
 * Time is treated on equal footing with spatial variables.
 * ODEs are just special cases of PDEs.
 * Non-linear PDEs are just special choices of $G$.
+* Vector-valued solutions $u$ are no problem.
 * Complicated BCs are captured by the operator $B$.
