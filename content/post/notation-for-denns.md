@@ -97,7 +97,7 @@ namely the derivative of $u$ in the direction normal to the boundary.
 ## Recap
 
 With this notation, we can denote a general $n$th-order PDE problem as
-$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
 In particular, with this notation

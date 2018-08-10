@@ -36,7 +36,7 @@ Throughout the post, I'll also try to provide a roadmap of the literature on thi
 ## The basic idea
 
 Let's start with a general $n$th-order PDE problem given by
-$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Our goal is to approximate the solution of the problem, $u$, with a neural network.
 I'm going to denote this neural network as $\tilde{u}$.
@@ -48,6 +48,17 @@ Nowadays, a common supervised learning recipe is as follows:
 3. Compute a loss function that describes the network's mistakes.
 4. Compute the gradient of the loss w.r.t. the network's parameters $\vec{w}$.
 5. Use gradient descent to update $\vec{w}$.
+
+This same technique could be used to teach $\tilde{u}$ to approximate $u$.
+The input-output pairs could be computed using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
+The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
+This turns out to be a good way to accelerate certain expensive simulations, such as
+
+* Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017]())
+* A variety of quantum mechanical simulations ([Behler et al. ????](), [Isaac's group](), and many others)
+
+However, the technique I am discussing here is based on the key realizations that we don't *need* input-output pairs in order to solve the PDE.
+Indeed, the problem statement itself (i.e. the choice of  tells us everything we need to know to find the 
 
 
 Why do we expect this to work?
