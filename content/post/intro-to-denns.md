@@ -11,6 +11,8 @@ authors = ["Martin Magill"]
 tags = []
 categories = []
 
+math = true
+
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 # Use `caption` to display an image caption.
@@ -24,5 +26,15 @@ preview = true
 +++
 
 
-In this post, I'll cover the basic ideas involved in solving differential equations directly using neural networks.
-I'm also going to include a brief overview of the literature on this subject, which is a little fragmented.
+In this post, I'm going to give a brief overview on using neural networks to learn the solutions of differential equations directly.
+I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
+
+
+### A 
+
+Let's start with an example.
+One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
+\begin{align}
+u_{xx} + u_{yy} = 0
+\end{align}
+
