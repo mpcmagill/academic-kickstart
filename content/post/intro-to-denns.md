@@ -26,8 +26,10 @@ preview = false
 +++
 
 
-In this post, I'm going to give a brief overview on using neural networks to directly learn the solutions of differential equation problems.
+In this post, I'm going to give a brief overview on using neural networks to learn the solutions of PDE problems directly from the problem statement.
 If you haven't already, you may want to check out [this post]({{< ref "post/notation-for-denns.md" >}}) on the notation I'm using to discuss general PDEs.
 Throughout the post, I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
+
+
 
 
