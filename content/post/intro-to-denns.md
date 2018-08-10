@@ -31,5 +31,14 @@ If you haven't already, you may want to check out [this post]({{< ref "post/nota
 Throughout the post, I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
 
 
+## The basic idea
+
+Let's start with a general $n$th-order PDE problem given by
+$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
+$$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
+Our goal is to approximate the solution of the problem, $u$, with a neural network.
+I'm going to denote the output of our neural network as $\tilde{u}$.
+
+Why do we expect this to work?
 
 
