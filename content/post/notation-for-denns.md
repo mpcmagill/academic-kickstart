@@ -21,7 +21,7 @@ math = true
 [header]
 image = ""
 caption = ""
-preview = false
+preview = true
 
 summary = "This post describes a relatively general notation for discussing partial differential equation problems."
 
