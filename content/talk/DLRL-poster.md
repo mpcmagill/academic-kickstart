@@ -5,7 +5,7 @@ draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-#time_start = {{ .Date }}
+time_start = 7:00
 #time_end = {{ .Date }}
 
 # Abstract and optional shortened version.
