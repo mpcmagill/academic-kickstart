@@ -61,6 +61,21 @@ This turns out to be a good way to accelerate certain expensive simulations, suc
 
 However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to solve the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
+Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ directly.
+
+For training data, we will use a ``database'' of input points along with the constraints given by $G$ and $B$ at each input point.
+For instance, at an input point $\vec{x}_1$ drawn from the interior of $\Omega$, we know that $u$ satisfies
+$$G(\vec{x}_1,u(\vec{x}_1),\nabla u(\vec{x}_1),\ldots,\nabla^n u(\vec{x}_1)) = 0.$$
+We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
+$$\left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
+If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
+Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
+$$\sum_i \left( G(\vec{x}_i,\tilde{u}(\vec{x}_i),\nabla \tilde{u}(\vec{x}_i),\ldots,\nabla^n \tilde{u}(\vec{x}_i)) \right)^2,$$
+then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Omega$.
+
+Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
+In addition to approximately satisfying the PDE given by $G$, we need $\tilde{u}$ to approximately satisfy the BCs given by $B$.
+
 
 
 
