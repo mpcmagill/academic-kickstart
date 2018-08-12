@@ -1,7 +1,7 @@
 +++
 title = "Solving Differential Equations Directly with Neural Networks: An Overview"
 date = 2018-08-10
-draft = true
+draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Martin Magill"]
@@ -52,12 +52,14 @@ Nowadays, a common supervised learning recipe is as follows:
 This same technique could be used to teach $\tilde{u}$ to approximate $u$.
 The input-output pairs could be computed using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
 The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
+The loss function for this application would look something like
+$$\mathcal{L} = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2$$
 This turns out to be a good way to accelerate certain expensive simulations, such as
 
-* Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017]())
-* Many-body quantum mechanical simulations ([Behler et al. ????](), [Isaac's group](), and many others)
+* Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017](https://arxiv.org/abs/1701.08884))
+* Many-body quantum mechanical simulations ([Behler and Parrinello 2007](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
 
-However, the technique I am discussing here is based on the key realization that **we don't need input-output pairs in order to solve the PDE**.
+However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to solve the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 
 
