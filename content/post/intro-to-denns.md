@@ -123,7 +123,7 @@ In my opinion, the ability to solve high-dimensional PDEs is revolutionary in a 
 I'll delve more deeply into these results in a future post.
 
 Of course, I'll have to mention my own work on this technique.
-In [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), I conducted a series of experiments to study the internal representations learned by neural networks when they solve PDEs.
+In [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), I conducted a series of experiments to study the internal representations learned by neural networks when they solved a certain family of PDEs.
 I found that these internal representations are general across perturbations to the definition of $G$.
 In fact, the neural networks in my paper learned to identify general features about the PDE domain, in a way that is reminiscent of the features learned by CNNs in image processing tasks.
 
