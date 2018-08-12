@@ -75,7 +75,9 @@ then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Ome
 
 Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
 In addition to approximately satisfying the PDE given by $G$, we need $\tilde{u}$ to approximately satisfy the BCs given by $B$.
-
+We can accomplish this as we did for $G$, by including another loss term of the form
+$$\mathcal{L}_B[u] = \sum_j \left( B[\tilde{u}(\vec{x}_j))] \right)^2,$$
+where now we are summing over points $\vec{x}_j$ sampled from the boundary of the domain, $\partial \Omega$.
 
 
 
