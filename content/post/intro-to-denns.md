@@ -81,7 +81,7 @@ $$\mathcal{L}_B[\tilde{u}] = \sum_j \mathcal{l}_B\[\tilde{u}\](\vec{x}_j),$$
 where now we are summing over points $\vec{x}_j$ sampled from the boundary of the domain, $\partial \Omega$.
 
 We can put these terms together into a single loss function
-$$\mathcal{L}\[\tilde{u}\] = \sum\_k$$
+$$\mathcal{L}\[\tilde{u}\] = \sum\_k \left( \right),$$
 
 
 
