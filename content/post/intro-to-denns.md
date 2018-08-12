@@ -53,7 +53,7 @@ This same technique could be used to teach $\tilde{u}$ to approximate $u$.
 The input-output pairs could be computed using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
 The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
 The loss function for this application would look something like
-$$\mathcal{L} = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2$$
+$$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2$$
 This turns out to be a good way to accelerate certain expensive simulations, such as
 
 * Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017](https://arxiv.org/abs/1701.08884))
