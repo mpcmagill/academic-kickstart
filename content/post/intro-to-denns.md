@@ -70,7 +70,7 @@ We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term
 $$\left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
-$$\sum_i \left( G(\vec{x}_i,\tilde{u}(\vec{x}_i),\nabla \tilde{u}(\vec{x}_i),\ldots,\nabla^n \tilde{u}(\vec{x}_i)) \right)^2,$$
+$$\mathcal{L}_G[u] = \sum_i \left( G(\vec{x}_i,\tilde{u}(\vec{x}_i),\nabla \tilde{u}(\vec{x}_i),\ldots,\nabla^n \tilde{u}(\vec{x}_i)) \right)^2,$$
 then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Omega$.
 
 Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
