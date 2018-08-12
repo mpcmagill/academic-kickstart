@@ -28,7 +28,7 @@ preview = true
 +++
 
 This post describes a relatively general notation for discussing differential equation problems of all shapes and sizes.
-It's very similar to the notation of [Lagaris et al. 1997](https://arxiv.org/abs/physics/9705023) or [Berg and Nystr&ouml;m 2017](https://arxiv.org/abs/1711.06464).
+It's very similar to the notation of  [Dissanayake and Phan-Tien (1994)](https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.1640100303), [Lagaris et al. (1997)](https://arxiv.org/abs/physics/9705023) or [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464).
 
 Let's start with an example.
 Perhaps the simplest **partial differential equation** (PDE) of interest is the two-dimensional Laplace equation,
