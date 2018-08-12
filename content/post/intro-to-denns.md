@@ -76,13 +76,13 @@ then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Ome
 Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
 In addition to approximately satisfying the PDE given by $G$, we need $\tilde{u}$ to approximately satisfy the BCs given by $B$.
 We can accomplish this as we did for $G$, by including another loss term of the form
-$$\mathcal{l}_B\[\tilde{u}\](\vec{x}) = \sum_j \left( B\[\tilde{u}\](\vec{x}_j) \right)^2,$$
-$$\mathcal{L}_B[\tilde{u}] = \sum_j \mathcal{l}_B\[\tilde{u}\](\vec{x}),$$
+$$\mathcal{l}_B\[\tilde{u}\](\vec{x}) = \left( B\[\tilde{u}\](\vec{x}) \right)^2,$$
+$$\mathcal{L}_B[\tilde{u}] = \sum_j \mathcal{l}_B\[\tilde{u}\](\vec{x}_j),$$
 where now we are summing over points $\vec{x}_j$ sampled from the boundary of the domain, $\partial \Omega$.
 
 We can put these terms together into a single loss function
 $$\mathcal{L}[\tilde{u}] = \sum_k \left( \mathcal{l}_G\[\tilde{u}\](\vec{x}_k) I_{\mathrm{int}(\Omega)}(\vec{x}_k) + \mathcal{L}_B\[\tilde{u}\](\vec{x}_k) I_{\partial \Omega}(\vec{x}_k) \right),$$
-where $I_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 for 
+where $I_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 in the interior of $\Omega$, and 0 otherwise; $I_{\partial \Omega}$ acts similarly for the boundary; and the summation $k$ goes over some dataset that contains points from both the interior of $\Omega$ as well as its boundary.
 
 
 
