@@ -48,6 +48,9 @@ It is more convenient to simply think of $u$ as a function of a single combined 
 Then we can write down a general $n$th-order PDE as
 $$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
 where $n$ is the highest order of derivative taken with respect to any of the independent variables in $\vec{x}$.
+More conveniently still, we can think of $G$ as a differential operator, and write the same relation as
+$$G\[u\](\vec{x}) = 0$$
+to describe the PDE at a point $\vec{x}$.
 
 I'll note in passing how this relates to non-linear PDEs.
 These are generally a particularly challenging class of equations.
@@ -92,7 +95,7 @@ namely the derivative of $u$ in the direction normal to the boundary.
 ## Recap
 
 With this notation, we can denote a general $n$th-order PDE problem as
-$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
+$$G\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Most (if not all) PDEs can be written in this form for suitable choices of $G, \Omega$, and $B$.
 In this notation,
