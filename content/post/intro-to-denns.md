@@ -36,7 +36,7 @@ Throughout the post, I'll also try to provide a roadmap of the literature on thi
 ## The basic idea
 
 Let's start with a general $n$th-order PDE problem given by
-$$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
+$$G\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
 Our goal is to approximate the solution of the problem, $u$, with a neural network.
 I'm going to denote this neural network as $\tilde{u}$.
@@ -65,9 +65,9 @@ Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ direct
 
 For training data, we will use a "database" of input points along with the constraints given by $G$ and $B$ at each input point.
 For instance, at an input point $\vec{x}_1$ drawn from $\mathrm{int}(\Omega)$ (the interior of $\Omega$), we know that $u$ satisfies
-$$G(\vec{x}_1,u(\vec{x}_1),\nabla u(\vec{x}_1),\ldots,\nabla^n u(\vec{x}_1)) = 0.$$
+$$G\[u\](\vec{x}_1) = 0.$$
 We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
-$$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
+$$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G\[u\](\vec{x}_1) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
 $$\mathcal{L}_G[\tilde{u}] = \sum_i \mathcal{l}_G\[\tilde{u}\](\vec{x}_i),$$
@@ -83,5 +83,10 @@ where now we are summing over points $\vec{x}_j$ sampled from the boundary of th
 We can put these terms together into a single loss function
 $$\mathcal{L}\[\tilde{u}\] = \sum\_k \left( \mathcal{l}\_G\[\tilde{u}\](\vec{x}_k) I\_{\mathrm{int}(\Omega)}(\vec{x}\_k) + \mathcal{l}\_B\[\tilde{u}\](\vec{x}\_k) I\_{\partial \Omega}(\vec{x}\_k) \right),$$
 where $I\_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 in the interior of $\Omega$, and 0 otherwise; $I\_{\partial \Omega}$ acts similarly for the boundary; and the summation is over some dataset that contains points from both the interior of $\Omega$ as well as its boundary.
+Using this loss function, we can train $\tilde{u}$ to approximate $u$ without the need for any external data.
+
+
+## Historical perspectives
+
 
 
