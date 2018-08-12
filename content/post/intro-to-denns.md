@@ -67,7 +67,7 @@ For training data, we will use a "database" of input points along with the const
 For instance, at an input point $\vec{x}_1$ drawn from $\mathrm{int}(\Omega)$ (the interior of $\Omega$), we know that $u$ satisfies
 $$G(\vec{x}_1,u(\vec{x}_1),\nabla u(\vec{x}_1),\ldots,\nabla^n u(\vec{x}_1)) = 0.$$
 We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
-$$\mathcal{l}_G[\tilde{u}] (\vec{x}_1) $$
+$$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
 $$\mathcal{L}_G[\tilde{u}] = \sum_i \mathcal{l}_G[\tilde{u}](\vec{x}_i),$$
