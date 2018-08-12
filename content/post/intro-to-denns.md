@@ -63,7 +63,7 @@ However, the technique I am discussing here is based on the key realization that
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ directly.
 
-For training data, we will use a ``database'' of input points along with the constraints given by $G$ and $B$ at each input point.
+For training data, we will use a "database" of input points along with the constraints given by $G$ and $B$ at each input point.
 For instance, at an input point $\vec{x}_1$ drawn from the interior of $\Omega$, we know that $u$ satisfies
 $$G(\vec{x}_1,u(\vec{x}_1),\nabla u(\vec{x}_1),\ldots,\nabla^n u(\vec{x}_1)) = 0.$$
 We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
