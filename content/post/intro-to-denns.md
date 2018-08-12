@@ -102,6 +102,7 @@ A year or so later, [Milligen et al. (1995)](https://journals.aps.org/prl/abstra
 These authors appear to have been physicists working on simulations of plasmas in fusion energy devices at the EURATOM-CIEMAT Association for Fusion in Spain, and do not appear to have been aware of the work by Dissanayake and Phan-Tien.
 
 Later, [Lagaris et al. (1997)](https://arxiv.org/abs/physics/9705023) published a slightly different version of this technique.
+That group seems to have consisted of computer scientists, who do not appear to have been aware of either of the earlier works on this technique.
 They decomposed the solution of the PDE with the ansatz
 $$u(\vec{x}) = A(\vec{x}) + F(\vec{x},N(\vec{x},\vec{p})),$$
 where $N(\vec{x},\vec{p})$ is a neural network with parameter vector $\vec{p}$.
@@ -110,7 +111,18 @@ Thus, with their ansatz, $N$ can be trained to optimize only the constraint give
 
 Alas, the original technique of Lagaris et al. is only practical in rectangular domains with Dirichlet and/or Neumann boundary conditions.
 They and many others have since attempted to make it more general.
-Most of that work is covered in the book by [Yadav et al.](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
+Most of that work is covered in the book by [Yadav et al. (2015)](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
 Most recently, [Berg and Nystr&ouml;m](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
+
+On the other hand, there has been great recent success using the original formulation of the technique, i.e. where the solution of the PDE problem is approximated directly by a single neural network.
+For instance, [Sirignano and Spiliopolous](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
+[Han, Jentzen, and E (2018)](http://www.pnas.org/content/early/2018/08/03/1718942115.short) have independently reported similar results.
+These are extremely exciting results: solving high-dimensional PDE problems is historically extremely difficult.
+These groups were able to accomplish this by using custom-made deep neural network architectures.
+In my opinion, the ability to solve high-dimensional PDEs is revolutionary in a way reminiscent of the success of CNNs in image processing and LSTMs in natural language processing.
+
+
+
+
 
 
