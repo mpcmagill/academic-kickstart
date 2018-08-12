@@ -13,7 +13,7 @@ categories = []
 
 math = true
 
-summary = "This post contains a brief overview on solving PDE problems directly using neural networks, including an introduction to relevant literature."
+summary = "This post contains a brief overview on solving PDE problems directly using neural networks, including an overview of relevant literature."
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
@@ -28,9 +28,9 @@ preview = false
 +++
 
 
-In this post, I'm going to give a brief overview on using neural networks to learn the solutions of PDE problems directly from the problem statement.
+In this post, I'm going to give a brief introduction to using neural networks to learn the solutions of PDE problems directly from the problem statement.
 If you haven't already, you may want to check out [this post]({{< ref "post/notation-for-denns.md" >}}) on the notation I'm using to discuss general PDEs.
-Throughout the post, I'll also try to provide a roadmap of the literature on this subject, which is a little fragmented.
+I'm also going to provide a roadmap of the relevant literature on this subject, which is a little fragmented.
 
 
 ## The basic idea
@@ -112,14 +112,26 @@ Thus, with their ansatz, $N$ can be trained to optimize only the constraint give
 Alas, the original technique of Lagaris et al. is only practical in rectangular domains with Dirichlet and/or Neumann boundary conditions.
 They and many others have since attempted to make it more general.
 Most of that work is covered in the book by [Yadav et al. (2015)](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
-Most recently, [Berg and Nystr&ouml;m](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
+Most recently, [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
 
 On the other hand, there has been great recent success using the original formulation of the technique, i.e. where the solution of the PDE problem is approximated directly by a single neural network.
 For instance, [Sirignano and Spiliopolous](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
 [Han, Jentzen, and E (2018)](http://www.pnas.org/content/early/2018/08/03/1718942115.short) have independently reported similar results.
 These are extremely exciting results: solving high-dimensional PDE problems is historically extremely difficult.
-These groups were able to accomplish this by using custom-made deep neural network architectures.
+These groups were able to accomplish this by using custom-made deep neural network architectures; the majority of earlier papers only used shallow architectures.
 In my opinion, the ability to solve high-dimensional PDEs is revolutionary in a way reminiscent of the success of CNNs in image processing and LSTMs in natural language processing.
+I'll delve more deeply into these results in a future post.
+
+Of course, I'll have to mention my own work on this technique.
+In [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), I conducted a series of experiments to study the internal representations learned by neural networks when they solve PDEs.
+I found that these internal representations are general across perturbations to the definition of $G$.
+In fact, the neural networks in my paper learned to identify general features about the PDE domain, in a way that is reminiscent of the features learned by CNNs in image processing tasks.
+
+Many other papers have been published on this subject, and these are just the highlights that I have been most focused on.
+A common theme in this body of literature is fragmentation: many of the major publications on this subject do not cite many (or sometimes any) of those that have studied it before them.
+As far as I can tell, this is because the technique has attracted researchers from very diverse backgrounds.
+Nonetheless, given the promise of this powerful technique, I think the time is right to unite!
+Indeed, this technique has attracted such an eclectic audience precisely because it is applicable to a huge range of scientific and industrial problems.
 
 
 
