@@ -64,20 +64,25 @@ Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) te
 Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ directly.
 
 For training data, we will use a "database" of input points along with the constraints given by $G$ and $B$ at each input point.
-For instance, at an input point $\vec{x}_1$ drawn from the interior of $\Omega$, we know that $u$ satisfies
+For instance, at an input point $\vec{x}_1$ drawn from $\mathrm{int}(\Omega)$ (the interior of $\Omega$), we know that $u$ satisfies
 $$G(\vec{x}_1,u(\vec{x}_1),\nabla u(\vec{x}_1),\ldots,\nabla^n u(\vec{x}_1)) = 0.$$
 We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
-$$\left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
+$$\mathcal{l}_G[\tilde{u}](\vec{x}_1) = \left( G(\vec{x}_1,\tilde{u}(\vec{x}_1),\nabla \tilde{u}(\vec{x}_1),\ldots,\nabla^n \tilde{u}(\vec{x}_1)) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
-$$\mathcal{L}_G[u] = \sum_i \left( G(\vec{x}_i,\tilde{u}(\vec{x}_i),\nabla \tilde{u}(\vec{x}_i),\ldots,\nabla^n \tilde{u}(\vec{x}_i)) \right)^2,$$
+$$\mathcal{L}_G[\tilde{u}] = \sum_i \mathcal{l}_G[\tilde{u}](\vec{x}_i),$$
 then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Omega$.
 
 Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
 In addition to approximately satisfying the PDE given by $G$, we need $\tilde{u}$ to approximately satisfy the BCs given by $B$.
 We can accomplish this as we did for $G$, by including another loss term of the form
-$$\mathcal{L}_B[u] = \sum_j \left( B[\tilde{u}(\vec{x}_j))] \right)^2,$$
+$$\mathcal{l}_B[\tilde{u}](\vec{x}) = \sum_j \left( B[\tilde{u}](\vec{x}_j) \right)^2,$$
+$$\mathcal{L}_B[\tilde{u}] = \sum_j \mathcal{l}_B[\tilde{u}](\vec{x}),$$
 where now we are summing over points $\vec{x}_j$ sampled from the boundary of the domain, $\partial \Omega$.
+
+We can put these terms together into a single loss function
+$$\mathcal{L}[\tilde{u}] = \sum \mathcal{L}_G I_{\mathrm{int}(\Omega)} + \mathcal{L}_B I_{\partial \Omega},$$
+where $I_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 for 
 
 
 
