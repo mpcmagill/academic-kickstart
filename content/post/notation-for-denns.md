@@ -29,26 +29,19 @@ preview = true
 
 This post describes a relatively general notation for discussing differential equation problems of all shapes and sizes.
 Let's start with an example.
-One of the simplest boundary value problems of interest is given by the two-dimensional Laplace equation,
+Perhaps the simplest **partial differential equation** (PDE) of interest is the two-dimensional Laplace equation,
 $$u\_{xx}(x,y) + u\_{yy}(x,y) = 0.$$
 Here, $x$ and $y$ are coordinates of some vector $\vec{x}$ in a domain $\Omega$.
 The problem is to find the function $u(\vec{x})$ that satisfies Laplace's equation everywhere in $\Omega$.
-We can also write this **partial differential equation** (PDE) more succinctly using $\nabla$, as
+We can also write this PDE more succinctly using $\nabla$, as
 $$\nabla^2 u(\vec{x}) = 0.$$
-
-
-## What about time?
 
 Most PDEs are more complicated than Laplace's equation.
 For instance, a simple version of the heat equation is
 $$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t),$$
 where now $u$ is a function of a vector $\vec{x}$ in some spatial domain $\Omega$, but also depends on time $t$.
-A simple version of the convection-diffusion equation is
-$$\frac{\partial u(\vec{x},t)}{\partial t} = \nabla^2 u(\vec{x},t) - \vec{v}(\vec{x}) \cdot \nabla u(\vec{x},t),$$
-where $\vec{v}(\vec{x})$ is some fixed function.
-
-In both of these cases, the equations contain a mixture of spatial derivatives and derivatives with respect to time.
-For present purposes, we can ignore the distinction between space and time.
+Many PDEs contain this mixture of spatial derivatives and derivatives with respect to time.
+For present purposes, however, we can ignore the distinction between space and time.
 It is more convenient to simply think of $u$ as a function of a single combined space-and-time vector $\vec{x}$.
 Then we can write down a general $n$th-order PDE as
 $$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0,$$
@@ -72,7 +65,6 @@ So far, we have talked about $u$ assuming that it is a scalar function.
 More generally, we might consider PDEs that describe vector or tensor functions $u$.
 For instance, the Navier-Stokes equations describe the evolution of a three-dimensional fluid flow along with its density, pressure, stress tensor, etc.
 These PDEs can still be written in the general form given above, but the derivatives will generally be higher-order tensors.
-For simplicity, the rest of this discussion will continue to talk about scalar solutions $u$.
 
 
 ## Boundary conditions
@@ -80,14 +72,15 @@ For simplicity, the rest of this discussion will continue to talk about scalar s
 On their own, most PDEs actually have infinitely many solutions.
 Generally, PDE problems will also come with **boundary conditions** (BCs).
 These specify that the solution $u$ must behave in some way on the boundary $\partial \Omega$ of the domain.
-For instance, *Dirichlet BCs* state what values the solution must have on $\partial \Omega$.
+For instance, *Dirichlet BCs* specify the required values of $u$ on $\partial \Omega$.
 On the other hand, *Neumann BCs* state the values of the normal derivative of $u$ on $\partial \Omega$.
 
 Many other types of boundary conditions exist.
 In some applications, boundary conditions can get pretty complicated.
-For the present discussion, we will denote general BCs as
-$$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
-For homogeneous Dirichlet BCs, the operator $B$ would be
+We can denote BCs in general as
+$$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega,$$
+where $B$ represents some differential operator.
+For homogeneous Dirichlet BCs, the operator $B$ would be the identity operator, so that
 $$B\[u\] = u.$$
 For homogeneous Neumann BCs, the operator $B$ would be
 $$B\[u\] = u\_{\hat{n}},$$
@@ -99,11 +92,11 @@ namely the derivative of $u$ in the direction normal to the boundary.
 With this notation, we can denote a general $n$th-order PDE problem as
 $$G(\vec{x},\nabla u(\vec{x}),\nabla^2 u(\vec{x}),\ldots,\nabla^n u(\vec{x})) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
-Most (if not all) PDEs can be written in this form for suitable choices of $G$ and $B$.
-In particular, with this notation
+Most (if not all) PDEs can be written in this form for suitable choices of $G, \Omega$, and $B$.
+In this notation,
 
 * Time is treated on equal footing with spatial variables.
-* Non-linear PDEs are just special choices of $G$.
+* Non-linear PDEs amount to non-linear functions $G$.
 * ODEs are just special cases of PDEs.
 * Vector-valued solutions $u$ are no problem.
 * Complicated BCs are captured by the operator $B$.
