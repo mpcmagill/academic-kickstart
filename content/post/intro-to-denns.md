@@ -85,8 +85,32 @@ $$\mathcal{L}\[\tilde{u}\] = \sum\_k \left( \mathcal{l}\_G\[\tilde{u}\](\vec{x}_
 where $I\_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 in the interior of $\Omega$, and 0 otherwise; $I\_{\partial \Omega}$ acts similarly for the boundary; and the summation is over some dataset that contains points from both the interior of $\Omega$ as well as its boundary.
 Using this loss function, we can train $\tilde{u}$ to approximate $u$ without the need for any external data.
 
+Unfortunately, there is inevitably some amount of ambiguity in this formulation.
+We are trying to define a loss function that makes $\tilde{u}$ satisfy two independent contraints: those given by $G$ as well as those given by $B$.
+Thus we need to choose the relative importance of these two constraints.
+For instance, how many of our sample points $\vec{x}_k$ should be taken from the interior of $\Omega$, and how many from the boundary?
+Similarly, we can add arbitrary weights to either term in our loss function to emphasize $G$ over $B$ or vice versa.
+At this time, there is no unique universal resolution to this issue, as far as I know.
 
-## Historical perspectives
 
+## Historical notes
+
+The technique described above seems to have been "invented" independently multiple times.
+As far as I can tell, the first to publish this idea were [Dissanayake and Phan-Tien (1994)](https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.1640100303), who were working in the Department of Mechanical Engineering at The University of Sydney.
+They published in Communications in Numerical Methods in Engineering.
+A year or so later, [Milligen et al. (1995)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3594) published virtually the same technique in the prestigious Physical Review Letters.
+These authors appear to have been physicists working on simulations of plasmas in fusion energy devices at the EURATOM-CIEMAT Association for Fusion in Spain, and do not appear to have been aware of the work by Dissanayake and Phan-Tien.
+
+Later, [Lagaris et al. (1997)](https://arxiv.org/abs/physics/9705023) published a slightly different version of this technique.
+They decomposed the solution of the PDE with the ansatz
+$$u(\vec{x}) = A(\vec{x}) + F(\vec{x},N(\vec{x},\vec{p})),$$
+where $N(\vec{x},\vec{p})$ is a neural network with parameter vector $\vec{p}$.
+They showed how to manually select the functions $A$ and $F$ such that $u$ satisfied the BCs of the problem exactly regardless of the output of $N$.
+Thus, with their ansatz, $N$ can be trained to optimize only the constraint given by $G$, resolving the ambiguity described earlier.
+
+Alas, the original technique of Lagaris et al. is only practical in rectangular domains with Dirichlet and/or Neumann boundary conditions.
+They and many others have since attempted to make it more general.
+Most of that work is covered in the book by [Yadav et al.](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
+Most recently, [Berg and Nystr&ouml;m](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
 
 
