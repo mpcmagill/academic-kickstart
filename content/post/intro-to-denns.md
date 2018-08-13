@@ -62,7 +62,7 @@ This turns out to be a good way to accelerate or replace certain expensive simul
 * Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
 * Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017](https://arxiv.org/abs/1701.08884))
 
-However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to solve the PDE**.
+However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to learn the solution of the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ directly.
 
