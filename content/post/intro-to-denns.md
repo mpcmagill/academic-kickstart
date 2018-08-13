@@ -88,14 +88,15 @@ We can put these terms together into a single loss function
 $$\mathcal{L}\[\tilde{u}\] = \sum\_k \left( \mathcal{l}\_G\[\tilde{u}\](\vec{x}_k) I\_{\mathrm{int}(\Omega)}(\vec{x}\_k) + \mathcal{l}\_B\[\tilde{u}\](\vec{x}\_k) I\_{\partial \Omega}(\vec{x}\_k) \right),$$
 where $I\_{\mathrm{int}(\Omega)}$ is an indicator function that is equal to 1 in the interior of $\Omega$, and 0 otherwise; $I\_{\partial \Omega}$ acts similarly for the boundary; and the summation is over some dataset that contains points from both the interior of $\Omega$ as well as its boundary.
 In other words, this loss function is the squared error by which $\tilde{u}$ fails to satisfy the PDE plus the squared error by which it fails to satisfy the BCs.
-By minimizing this loss over the problem domain, we can train $\tilde{u}$ to approximate $u$ without the need for any external data.
+By minimizing this loss over the problem domain, we can train $\tilde{u}$ to learn the solution to the PDE problem without the need for any external data.
 
 Unfortunately, there is inevitably some amount of ambiguity in this formulation.
 We are trying to define a loss function that makes $\tilde{u}$ satisfy two independent contraints: those given by $G$ as well as those given by $B$.
 Thus we need to choose the relative importance of these two constraints.
 For instance, how many of our sample points $\vec{x}_k$ should be taken from the interior of $\Omega$, and how many from the boundary?
 Similarly, we can add arbitrary weights to either term in our loss function to emphasize $G$ over $B$ or vice versa.
-At this time, there is no unique universal resolution to this issue, as far as I know.
+In general, there is no "correct answer" to this kind of multi-objective optimization problem.
+
 
 ### Regarding the computation of gradients
 
