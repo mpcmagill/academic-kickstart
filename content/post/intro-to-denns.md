@@ -114,13 +114,12 @@ David Duvenaud also compared the pros and cons of forward versus backward propag
 This is unusual in most applications of neural networks.
 For instance, in image classification inputs are images with thousands of pixels, whereas outputs are often class labels or bounding box coordinates.
 However, problems with more outputs than inputs arise naturally from coupled systems of PDEs.
-For instance, in the [shallow-water magnetohydrodynamic equations](http://iopscience.iop.org/article/10.1086/317291/fulltext/005620.text.html), the input is two-dimensional, but the PDEs describe a total of five output variables.
+For instance, in the [shallow-water magnetohydrodynamic equations](http://iopscience.iop.org/article/10.1086/317291/pdf), the input is two-dimensional, but the PDEs describe a total of five output variables.
 Such a PDE could be solved using many independent neural networks trained together, but there could feasibly be advantages to solving the problem with a single five-dimensional output.
 
-At the moment, I've been using standard TensorFlow automatic differentiation and backpropagation libraries for solving PDEs with neural networks.
+So far, I've been using standard TensorFlow automatic differentiation and backpropagation libraries for solving PDEs with neural networks.
 In the future, however, it might be worthwhile to tailor these algorithms more carefully to exploit the special circumstances of this application.
 This might be particularly beneficial for the more demanding applications of this technique, like solving very high-dimensional PDEs (see below).
-
 
 
 
