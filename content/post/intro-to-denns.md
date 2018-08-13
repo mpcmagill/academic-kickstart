@@ -142,7 +142,8 @@ Thus, with their ansatz, $N$ can be trained to optimize only the constraint give
 Alas, the original technique of Lagaris et al. is only practical in rectangular domains with Dirichlet and/or Neumann boundary conditions.
 They and many others have since attempted to make it more general.
 Most of that work is reviewed in the book by [Yadav et al. (2015)](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
-Most recently, [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
+Most recently, [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) published a very flexible version extension to the technique of Lagaris et al., which essentially approximates $A$ and $F$ with two additional neural networks in a nice, modular fashion.
+I was unable to generalize their method nicely to problems containing a mixture of Dirichlet and Neumann BCs, although I may have missed something.
 
 On the other hand, there has been great recent success using the original formulation of the technique, i.e. where the solution of the PDE problem is approximated directly by a single neural network.
 For instance, [Sirignano and Spiliopolous (2017)](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
