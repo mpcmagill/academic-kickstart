@@ -107,7 +107,7 @@ These can also be computed using backpropagation and automatic differentation.
 
 As a result of all these extra gradients, these networks present a somewhat unique situation for automatic differentiation.
 As David Duvenaud discussed in a [recent lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School in Toronto, it is rare to find an application where one requires derivatives of higher than second order.
-However, something like the [biharmonic equation](https://en.wikipedia.org/wiki/Biharmonic_equation) (a PDE arising in continuum mechanics) is defined in terms of fourth order derivatives!
+However, something like the [biharmonic equation](https://en.wikipedia.org/wiki/Biharmonic_equation) (a PDE arising in continuum mechanics) is defined in terms of fourth-order derivatives!
 Of course, these higher-order derivatives are only with respect to the handful of input variables, rather than the many network weights.
 
 David Duvenaud also compared the pros and cons of forward versus backward propagation, and explains that the less common forward propagation algorithm is actually more efficient when the number of outputs exceeds the number of inputs.
