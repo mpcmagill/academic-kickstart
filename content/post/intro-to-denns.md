@@ -74,7 +74,7 @@ $$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G\[u\](\vec{x}_1) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
 $$\mathcal{L}_G[\tilde{u}] = \sum_i \mathcal{l}_G\[\tilde{u}\](\vec{x}_i),$$
-then $\tilde{u}$ will approximately satisfy $G$ throughout the interior of $\Omega$.
+then $\tilde{u}$ will approximately satisfy the PDE throughout the interior of $\Omega$.
 
 Of course, this is not enough to make $\tilde{u}$ successfully approximate $u$.
 In addition to approximately satisfying the PDE given by $G$, we need $\tilde{u}$ to approximately satisfy the BCs given by $B$.
