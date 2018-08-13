@@ -56,7 +56,7 @@ We could compute a database of input-output pairs using some other technique for
 The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
 The loss function for this application would look something like
 $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2.$$
-This turns out to be a good way to accelerate certain expensive simulations; a handful of examples include:
+This turns out to be a good way to accelerate or replace certain expensive simulations; a handful of examples include:
 
 * Many-body quantum mechanical simulations ([Behler and Parrinello 2007](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
 * Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
