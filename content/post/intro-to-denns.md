@@ -143,15 +143,14 @@ Alas, the original technique of Lagaris et al. is only practical in rectangular 
 They and many others have since attempted to make it more general.
 Most of that work is reviewed in the book by [Yadav et al. (2015)](https://link.springer.com/content/pdf/10.1007/978-94-017-9816-7.pdf).
 Most recently, [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) published a very flexible version extension to the technique of Lagaris et al., which essentially approximates $A$ and $F$ with two additional neural networks in a nice, modular fashion.
-I was unable to generalize their method nicely to problems containing a mixture of Dirichlet and Neumann BCs, although I may have missed something.
+They focused on problems with only Dirichlet BCs; I was unable to generalize their method nicely to problems containing a mixture of Dirichlet and Neumann BCs, although I may have missed something.
 
 On the other hand, there has been great recent success using the original formulation of the technique, i.e. where the solution of the PDE problem is approximated directly by a single neural network.
 For instance, [Sirignano and Spiliopolous (2017)](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
 [Han, Jentzen, and E (2018)](http://www.pnas.org/content/early/2018/08/03/1718942115.short) have independently reported similar results.
 These are extremely exciting results: solving high-dimensional PDE problems is historically extremely difficult.
 These groups were able to accomplish this by using custom-made deep neural network architectures; the majority of earlier papers only used shallow architectures.
-In my opinion, the ability to solve high-dimensional PDEs is revolutionary in a way reminiscent of the success of CNNs in image processing and LSTMs in natural language processing.
-I'll delve more deeply into these results in a future post.
+In my opinion, **the ability to solve high-dimensional PDEs is revolutionary** in a way reminiscent of the success of CNNs in image processing and LSTMs in natural language processing.
 
 Of course, I'll have to mention my own work on this technique.
 In [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), I conducted a series of experiments to study the internal representations learned by neural networks when they solved a certain family of PDEs.
