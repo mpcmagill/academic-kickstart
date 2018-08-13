@@ -59,7 +59,7 @@ $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \ri
 This turns out to be a good way to accelerate certain expensive simulations; a handful of examples include:
 
 * Many-body quantum mechanical simulations ([Behler and Parrinello 2007](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
-* Transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
+* Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
 * Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017](https://arxiv.org/abs/1701.08884))
 
 However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to solve the PDE**.
