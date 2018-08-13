@@ -52,7 +52,7 @@ Nowadays, a common supervised learning recipe for general neural network applica
 5. Use gradient descent to update $\vec{w}$.
 
 This same technique could be used in our case to teach $\tilde{u}$ to approximate $u$.
-We could compute a database of input-output pairs using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
+We could compute a database of input-output pairs using some other technique for solving PDEs, like a finite difference/element method or a particle-based simulation.
 The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
 The loss function for this application would look something like
 $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2.$$
