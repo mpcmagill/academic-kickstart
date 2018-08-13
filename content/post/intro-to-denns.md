@@ -111,7 +111,8 @@ However, something like the [biharmonic equation](https://en.wikipedia.org/wiki/
 Of course, these higher-order derivatives are only with respect to the handful of input variables, rather than the many network weights.
 
 David Duvenaud also compared the pros and cons of forward versus backward propagation, and explains that the less common forward propagation algorithm is actually more efficient when the number of outputs exceeds the number of inputs.
-This is unusual in, for instance, image classification, where inputs are images with thousands of pixels, whereas outputs are often class labels or bounding box coordinates.
+This is unusual in most applications of neural networks.
+For instance, in image classification inputs are images with thousands of pixels, whereas outputs are often class labels or bounding box coordinates.
 However, a problem with more outputs than inputs arises naturally in coupled systems of PDEs.
 For instance, in the [shallow-water magnetohydrodynamic equations](http://iopscience.iop.org/article/10.1086/317291/fulltext/005620.text.html), the input is two-dimensional, but the PDEs describe a total of five output variables.
 Such a PDE could be solved using many independent neural networks trained together, but there could feasibly be advantages to solving the problem with a single five-dimensional output.
