@@ -106,11 +106,11 @@ In the technique I'm presenting here, however, the loss function itself already 
 These can also be computed using backpropagation and automatic differentation.
 
 As a result of all these extra gradients, these networks present a somewhat unique situation for automatic differentiation.
-As David Duvenaud discussed in a [recent lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School in Toronto, it is rare to find an application where one requires derivatives of higher than second order.
+As Dr. David Duvenaud discussed in a [recent lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School in Toronto, it is rare to find an application where one requires derivatives of higher than second order.
 However, something like the [biharmonic equation](https://en.wikipedia.org/wiki/Biharmonic_equation) (a PDE arising in continuum mechanics) is defined in terms of fourth-order derivatives!
 Of course, these higher-order derivatives are only with respect to the handful of input variables, rather than the many network weights.
 
-David Duvenaud also compared the pros and cons of forward versus backward propagation, and explains that the less common forward propagation algorithm is actually more efficient when the number of outputs exceeds the number of inputs.
+Dr. David Duvenaud also compared the pros and cons of forward versus backward propagation, and explains that the less common forward propagation algorithm is actually more efficient when the number of outputs exceeds the number of inputs.
 This is unusual in most applications of neural networks.
 For instance, in image classification inputs are images with thousands of pixels, whereas outputs are often class labels or bounding box coordinates.
 However, problems with more outputs than inputs arise naturally from coupled systems of PDEs.
@@ -152,15 +152,25 @@ These are extremely exciting results: solving high-dimensional PDE problems is h
 These groups were able to accomplish this by using custom-made deep neural network architectures; the majority of earlier papers only used shallow architectures.
 In my opinion, **the ability to solve high-dimensional PDEs is revolutionary** in a way reminiscent of the success of CNNs in image processing and LSTMs in natural language processing.
 
-Of course, I'll have to mention my own work on this technique.
-In [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), I conducted a series of experiments to study the internal representations learned by neural networks when they solved a certain family of PDEs.
-I found that these internal representations are general across perturbations to the definition of $G$.
-In fact, the neural networks in my paper learned to identify general features about $\Omega$ in the context of $G$, in a way that is reminiscent of the features learned by CNNs in image processing tasks.
+In addition to its great potential for applications, many authors have argued that this topic is an excellent opportunity to study the dynamics and structures of neural networks in a controlled setting.
+As discussed by Prof. Sanjeev Arora in [his lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School, most applications of deep neural networks do not have precise mathematical formulations.
+As such, most theoretical work on deep neural networks is conducted in a problem-agnostic fashion, and it is difficult to obtain powerful theoretical results that are relevant to interest deep learning applications.
+Conversely, using neural networks to solve PDEs in the way discussed here is a real-world application of widespread interest across science and technology that has a very precise mathematical formulation.
+Indeed, there already exist vast bodies of literature on the existence, uniqueness, and various other properties of PDE solutions.
 
-Many other papers have been published on this subject, and these are just the highlights that I have been most focused on.
+Nonetheless, I haven't been able to find much work of this nature.
+[Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) tried to study how the weights of their trained neural networks changed as the PDE problem was perturbed.
+They found that, although the networks converged reliably to the same solutions, the numerical values of the network weights varied considerably across different random initializations.
+I followed up on this idea in [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), where I conducted a series of experiments to study how the *internal representations* learned by neural networks trained to solve a family of related PDE problems changed as $G$ was perturbed.
+I used the SVCCA, introduced to deep learning by [Raghu et al. (2017)](https://arxiv.org/abs/1706.05806), to work with the learned representations themselves, instead of trying to analyse the network weights directly.
+I found that the internal representations in the first few layers are general across perturbations to the definition of $G$.
+Furthermore, I was actually able to interpret the general representations in the first layers as generalized coordinates over $\Omega$.
+This result has a counterpart in machine vision, where the first layers of CNNs consistently learn Gabor filters (which extract edges and colours).
+
+Many other papers have been published on the subject of solving PDEs with neural networks, and those above are just the highlights that I have been most focused on.
 A common theme in this body of literature is fragmentation: many of the major publications on this subject do not cite many (or sometimes any) of those that have studied it before them.
 As far as I can tell, this is because the technique has attracted researchers from very diverse backgrounds.
-Nonetheless, given the promise of this powerful technique, I think the time is right to unite!
+Nonetheless, given the promise of this powerful technique, I think the community would benefit from more connectivity.
 Indeed, this technique has attracted such an eclectic audience precisely because it is applicable to a huge range of scientific and industrial problems.
 
 
