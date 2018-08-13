@@ -137,7 +137,7 @@ They decomposed the solution of the PDE with the ansatz
 $$u(\vec{x}) = A(\vec{x}) + F(\vec{x},N(\vec{x},\vec{p})),$$
 where $N(\vec{x},\vec{p})$ is a neural network with parameter vector $\vec{p}$.
 They showed how to manually select the functions $A$ and $F$ such that $u$ satisfied the BCs of the problem exactly regardless of the output of $N$.
-Thus, with their ansatz, $N$ can be trained to optimize only the constraint given by $G$, resolving the ambiguity described earlier.
+Thus, with their ansatz, $N$ can be trained to optimize only the constraint given by $G$, resolving the ambiguity described earlier and ensuring the solution always satisfies the BCs exactly.
 
 Alas, the original technique of Lagaris et al. is only practical in rectangular domains with Dirichlet and/or Neumann boundary conditions.
 They and many others have since attempted to make it more general.
