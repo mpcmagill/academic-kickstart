@@ -58,9 +58,9 @@ The loss function for this application would look something like
 $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2.$$
 This turns out to be a good way to accelerate or replace certain expensive simulations; a handful of examples include:
 
-* Many-body quantum mechanical simulations ([Behler and Parrinello 2007](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
+* Many-body quantum mechanical simulations ([Behler and Parrinello (2007)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
 * Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
-* Viscoelastic calculations for studying earthquakes ([DeVries et al. 2017](https://arxiv.org/abs/1701.08884))
+* Viscoelastic calculations for studying earthquakes ([DeVries et al. (2017)](https://arxiv.org/abs/1701.08884))
 
 However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to learn the solution of the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
@@ -142,7 +142,7 @@ Most of that work is covered in the book by [Yadav et al. (2015)](https://link.s
 Most recently, [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) published a very flexible version of this technique that essentially approximates $A$ and $F$ with two additional neural networks.
 
 On the other hand, there has been great recent success using the original formulation of the technique, i.e. where the solution of the PDE problem is approximated directly by a single neural network.
-For instance, [Sirignano and Spiliopolous](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
+For instance, [Sirignano and Spiliopolous (2017)](https://arxiv.org/pdf/1708.07469.pdf) used it to solve PDEs in up to 200 dimensions.
 [Han, Jentzen, and E (2018)](http://www.pnas.org/content/early/2018/08/03/1718942115.short) have independently reported similar results.
 These are extremely exciting results: solving high-dimensional PDE problems is historically extremely difficult.
 These groups were able to accomplish this by using custom-made deep neural network architectures; the majority of earlier papers only used shallow architectures.
