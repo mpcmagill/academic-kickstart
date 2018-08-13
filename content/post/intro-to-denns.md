@@ -154,7 +154,7 @@ In my opinion, **the ability to solve high-dimensional PDEs is revolutionary** i
 
 In addition to its great potential for applications, many authors have argued that this topic is an excellent opportunity to study the dynamics and structures of neural networks in a controlled setting.
 As discussed by Prof. Sanjeev Arora in [his lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School, most applications of deep neural networks do not have precise mathematical formulations.
-As such, most theoretical work on deep neural networks is conducted in a problem-agnostic fashion, and it is difficult to obtain powerful theoretical results that are relevant to interest deep learning applications.
+As such, most theoretical work on deep neural networks is conducted in a problem-agnostic fashion, and it is difficult to obtain powerful theoretical results that are relevant to real-world deep learning applications.
 Conversely, using neural networks to solve PDEs in the way discussed here is a real-world application of widespread interest across science and technology that has a very precise mathematical formulation.
 Indeed, there already exist vast bodies of literature on the existence, uniqueness, and various other properties of PDE solutions.
 
