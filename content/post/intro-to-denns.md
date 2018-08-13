@@ -28,20 +28,22 @@ preview = false
 +++
 
 
-In this post, I'm going to give a brief introduction to using neural networks to learn the solutions of PDE problems directly from the problem statement.
-If you haven't already, you may want to check out [this post]({{< ref "post/notation-for-denns.md" >}}) on the notation I'm using to discuss general PDEs.
+In this post, I'm going to give a brief introduction to using neural networks to learn the solutions of PDE problems directly.
+In other words, the neural networks will learn the solutions without relying on a databse of precomputed solutions obtained using other methods.
 I'm also going to provide a roadmap of the relevant literature on this subject, which is a little fragmented.
+If you haven't already, you may want to check out [this post]({{< ref "post/notation-for-denns.md" >}}) on the notation I'm using.
 
 
 ## The basic idea
 
-Let's start with a general $n$th-order PDE problem given by
+Let's start with a general PDE problem given by
 $$G\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\Omega,$$
 $$B\[u\](\vec{x}) = 0\quad\mathrm{for}\quad\vec{x}\in\partial\Omega.$$
-Our goal is to approximate the solution of the problem, $u$, with a neural network.
-I'm going to denote this neural network as $\tilde{u}$.
+Our goal is to approximate the solution of the problem, $u(\vec{x})$, with a neural network.
+I'm going to denote this neural network as $\tilde{u}(\vec{x})$.
+Specifically, $\tilde{u}$ can be any neural network architecture that takes $\vec{x}$ as an input and returns an approximation to $u$.
 
-Nowadays, a common supervised learning recipe is as follows:
+Nowadays, a common supervised learning recipe is roughly as follows:
 
 1. Collect a database of correct input-output pairs, $\\\{\vec{x}_i,u(\vec{x})_i\\\}$.
 2. Compute the network's naive predictions, $\\\{\vec{x}_i,\tilde{u}(\vec{x})_i\\\}$.
@@ -50,7 +52,7 @@ Nowadays, a common supervised learning recipe is as follows:
 5. Use gradient descent to update $\vec{w}$.
 
 This same technique could be used to teach $\tilde{u}$ to approximate $u$.
-The input-output pairs could be computed using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
+We could compute a databse of input-output pairs using some other solution technique for differential equations, like a finite difference/element method or a particle-based simulation.
 The neural network could then be used as a regression model to fit a large amount of simulation data into a relatively compact and flexible form.
 The loss function for this application would look something like
 $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2$$
@@ -63,10 +65,10 @@ However, the technique I am discussing here is based on the key realization that
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
 Let's see how we can reformulate training in terms of $G,\Omega$, and $B$ directly.
 
-For training data, we will use a "database" of input points along with the constraints given by $G$ and $B$ at each input point.
+For training data, we will use a "database" of input points sampled from $\Omega$, along with the constraints given by $G$ and $B$ at each input point.
 For instance, at an input point $\vec{x}_1$ drawn from $\mathrm{int}(\Omega)$ (the interior of $\Omega$), we know that $u$ satisfies
 $$G\[u\](\vec{x}_1) = 0.$$
-We can encourage $\tilde{u}$ to approximate this behaviour by adding a loss term like
+We can encourage $\tilde{u}$ to approximate this behaviour by including a loss term like
 $$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G\[u\](\vec{x}_1) \right)^2.$$
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
@@ -91,6 +93,30 @@ Thus we need to choose the relative importance of these two constraints.
 For instance, how many of our sample points $\vec{x}_k$ should be taken from the interior of $\Omega$, and how many from the boundary?
 Similarly, we can add arbitrary weights to either term in our loss function to emphasize $G$ over $B$ or vice versa.
 At this time, there is no unique universal resolution to this issue, as far as I know.
+
+### Regarding the computation of gradients
+
+The basic training recipe I've outlined here assumes that we can compute the gradients of the network's loss with respect to its weights.
+Nowadays, these are usually computed using backpropagation and automatic differentation.
+In the technique I'm presenting here, however, the loss function itself already includes gradients of the network's output with respect to its inputs.
+These can also be computed using backpropagation and automatic differentation.
+
+As a result of all these extra gradients, these networks present a somewhat unique situation for automatic differentiation.
+As David Duvenaud discussed in a [recent lecture](https://dlrlsummerschool.ca/ "The video should be online soon, but in the meantime here is the summer school website.") at the 2018 DLRL Summer School in Toronto, it is rare to find an application where one requires derivatives of higher than second order.
+However, something like the [biharmonic equation](https://en.wikipedia.org/wiki/Biharmonic_equation) (a PDE arising in continuum mechanics) is defined in terms of fourth order derivatives!
+Of course, these higher-order derivatives are only with respect to the handful of input variables, rather than the many network weights.
+
+David Duvenaud also compared the pros and cons of forward versus backward propagation, and explains that the less common forward propagation algorithm is actually more efficient when the number of outputs exceeds the number of inputs.
+This is unusual in, for instance, image classification, where inputs are images with thousands of pixels, whereas outputs are often class labels or bounding box coordinates.
+However, a problem with more outputs than inputs arises naturally in coupled systems of PDEs.
+For instance, in the [shallow-water magnetohydrodynamic equations](http://iopscience.iop.org/article/10.1086/317291/fulltext/005620.text.html), the input is two-dimensional, but the PDEs describe a total of five output variables.
+Such a PDE could be solved using many independent neural networks trained together, but there could feasibly be advantages to solving the problem with a single five-dimensional output.
+
+At the moment, I've been using standard TensorFlow automatic differentiation and backpropagation libraries for solving PDEs with neural networks.
+In the future, however, it might be worthwhile to tailor these algorithms more carefully to exploit the special circumstances of this application.
+This might be particularly beneficial for the more demanding applications of this technique, like solving very high-dimensional PDEs (see below).
+
+
 
 
 ## Historical notes
