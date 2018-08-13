@@ -160,12 +160,13 @@ Indeed, there already exist vast bodies of literature on the existence, uniquene
 
 Nonetheless, I haven't been able to find much work of this nature.
 [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) tried to study how the weights of their trained neural networks changed as the PDE problem was perturbed.
-They found that, although the networks converged reliably to the same solutions, the numerical values of the network weights varied considerably across different random initializations.
-I followed up on this idea in [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), where I conducted a series of experiments to study how the *internal representations* learned by neural networks trained to solve a family of related PDE problems changed as $G$ was perturbed.
+They found that, although the networks converged reliably to the PDE solutions, the numerical values of the network weights varied considerably across different random initializations.
+I followed up on this idea in [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), where I conducted a series of experiments on a family of problems based on [Poisson's equation](https://en.wikipedia.org/wiki/Poisson%27s_equation)
+I studied the *internal representations* learned by the neural networks changed as $G$ was perturbed.
 I used the SVCCA, introduced to deep learning by [Raghu et al. (2017)](https://arxiv.org/abs/1706.05806), to work with the learned representations themselves, instead of trying to analyse the network weights directly.
 I found that the internal representations in the first few layers are general across perturbations to the definition of $G$.
-Furthermore, I was actually able to interpret the general representations in the first layers as generalized coordinates over $\Omega$.
-This result has a counterpart in machine vision, where the first layers of CNNs consistently learn Gabor filters (which extract edges and colours).
+Furthermore, I was actually able to interpret the general representations in the first layer as generalized coordinates over $\Omega$.
+This result has a counterpart in machine vision, where the first layer of CNNs consistently learn Gabor filters (which extract edges and colours).
 
 Many other papers have been published on the subject of solving PDEs with neural networks, and those above are just the highlights that I have been most focused on.
 A common theme in this body of literature is fragmentation: many of the major publications on this subject do not cite many (or sometimes any) of those that have studied it before them.
