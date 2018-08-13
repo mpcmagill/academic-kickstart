@@ -43,7 +43,7 @@ Our goal is to approximate the solution of the problem, $u(\vec{x})$, with a neu
 I'm going to denote this neural network as $\tilde{u}(\vec{x})$.
 Specifically, $\tilde{u}$ can be any neural network architecture that takes $\vec{x}$ as an input and returns an approximation to $u$.
 
-Nowadays, a common supervised learning recipe is roughly as follows:
+Nowadays, a common supervised learning recipe for general neural network applications is roughly as follows:
 
 1. Collect a database of correct input-output pairs, $\\\{\vec{x}_i,u(\vec{x})_i\\\}$.
 2. Compute the network's naive predictions, $\\\{\vec{x}_i,\tilde{u}(\vec{x})_i\\\}$.
