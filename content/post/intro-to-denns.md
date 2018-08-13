@@ -29,7 +29,7 @@ preview = false
 
 
 In this post, I'm going to give a brief introduction to using neural networks to learn the solutions of PDE problems directly.
-In other words, the neural networks will learn the solutions without relying on a databse of precomputed solutions obtained using other methods.
+In other words, the neural networks will learn the solutions without relying on a database of precomputed solutions obtained using other methods.
 I'm also going to provide a roadmap of the relevant literature on this subject, which is a little fragmented.
 If you haven't already, you may want to check out [this post]({{< ref "post/notation-for-denns.md" >}}) on the notation I'm using.
 
@@ -58,9 +58,9 @@ The loss function for this application would look something like
 $$\mathcal{L}[\tilde{u}] = \sum_i \left( \tilde{u}(\vec{x}_i) - u(\vec{x}_i) \right)^2.$$
 This turns out to be a good way to accelerate or replace certain expensive simulations; a handful of examples include:
 
-* Many-body quantum mechanical simulations ([Behler and Parrinello (2007)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401))
-* Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432))
-* Viscoelastic calculations for studying earthquakes ([DeVries et al. (2017)](https://arxiv.org/abs/1701.08884))
+* Many-body quantum mechanical simulations ([Behler and Parrinello (2007)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401)),
+* Simulations of transport phenomena ([Farimani et al. (2017)](https://arxiv.org/abs/1709.02432)), and
+* Viscoelastic calculations for studying earthquakes ([DeVries et al. (2017)](https://arxiv.org/abs/1701.08884)).
 
 However, the technique I am discussing here is based on the key realization that **we don't need a database of input-output pairs in order to learn the solution of the PDE**.
 Indeed, the problem statement itself (i.e. the choice of $G,\Omega$, and $B$) tells us everything we need to know to train $\tilde{u}$ to approximate $u$.
@@ -161,7 +161,7 @@ Indeed, there already exist vast bodies of literature on the existence, uniquene
 Nonetheless, I haven't been able to find much work of this nature.
 [Berg and Nystr&ouml;m (2017)](https://arxiv.org/abs/1711.06464) tried to study how the weights of their trained neural networks changed as the PDE problem was perturbed.
 They found that, although the networks converged reliably to the PDE solutions, the numerical values of the network weights varied considerably across different random initializations.
-I followed up on this idea in [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), where I conducted a series of experiments on a family of problems based on [Poisson's equation](https://en.wikipedia.org/wiki/Poisson%27s_equation)
+I followed up on this idea in [Magill et al. (2018)](https://arxiv.org/abs/1807.00042), where I conducted a series of experiments on a family of problems based on [Poisson's equation](https://en.wikipedia.org/wiki/Poisson%27s_equation).
 I studied the *internal representations* learned by the neural networks changed as $G$ was perturbed.
 I used the SVCCA, introduced to deep learning by [Raghu et al. (2017)](https://arxiv.org/abs/1706.05806), to work with the learned representations themselves, instead of trying to analyse the network weights directly.
 I found that the internal representations in the first few layers are general across perturbations to the definition of $G$.
