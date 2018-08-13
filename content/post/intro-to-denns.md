@@ -71,6 +71,7 @@ For instance, at an input point $\vec{x}_1$ drawn from $\mathrm{int}(\Omega)$ (t
 $$G\[u\](\vec{x}_1) = 0.$$
 We can encourage $\tilde{u}$ to approximate this behaviour by including a loss term like
 $$\mathcal{l}_G\[\tilde{u}\](\vec{x}_1) = \left( G\[u\](\vec{x}_1) \right)^2.$$
+This is the square of the error by which $\tilde{u}$ fails to satisfy the PDE given by $G$ at the point $\vec{x}_1$.
 If $\tilde{u}$ learns to make this loss term small, then near $\vec{x}_1$ it will approximately satisfy the PDE given by $G$.
 Similarly, if $\tilde{u}$ learns to minimize the sum of this loss term over many points drawn from the interior of $\Omega$, namely
 $$\mathcal{L}_G[\tilde{u}] = \sum_i \mathcal{l}_G\[\tilde{u}\](\vec{x}_i),$$
