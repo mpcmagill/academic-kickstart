@@ -40,7 +40,7 @@ selected = true
 projects = []
 
 # Links (optional).
-url_pdf = "NanoporeChannelDevice.pdf"
+url_pdf = "files/NanoporeChannelDevice.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
