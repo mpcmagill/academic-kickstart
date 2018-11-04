@@ -40,15 +40,15 @@ selected = true
 projects = []
 
 # Links (optional).
-url_pdf = ""
-url_preprint = "https://aip.scitation.org/doi/10.1063/1.5037449"
+url_pdf = "NanoporeChannelDevice.pdf"
+url_preprint = ""
 url_code = ""
 url_dataset = ""
 url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "https://aip.scitation.org/doi/10.1063/1.5037449"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
