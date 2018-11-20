@@ -5,7 +5,7 @@ draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 2018-12-04T16:00:00
+time_start = 2018-12-04T10:45:00
 #time_end = 2030-06-01T15:00:00
 
 # Abstract and optional shortened version.
@@ -17,7 +17,7 @@ event = "The Thirty-second Conference on Neural Information Processing Systems"
 event_url = "https://neurips.cc/"
 
 # Location of event.
-location = "Montreal, QC"
+location = "Montr&00E9;al, QC"
 
 # Is this a selected talk? (true/false)
 selected = true
