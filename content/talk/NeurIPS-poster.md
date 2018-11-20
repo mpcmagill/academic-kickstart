@@ -1,6 +1,6 @@
 +++
 title = "Neural Networks Trained to Solve Differential Equations Learn General Representations"
-date = 2018-12-04T00:00:00
+date = 2018-11-20T00:00:00
 draft = false
 
 # Talk start and end times.
