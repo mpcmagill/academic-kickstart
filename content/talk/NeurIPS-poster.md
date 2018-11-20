@@ -17,7 +17,7 @@ event = "The Thirty-second Conference on Neural Information Processing Systems"
 event_url = "https://neurips.cc/"
 
 # Location of event.
-location = "Montréal, QC"
+location = "Montreal, QC"
 
 # Is this a selected talk? (true/false)
 selected = true
