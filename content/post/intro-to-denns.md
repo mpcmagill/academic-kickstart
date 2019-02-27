@@ -128,7 +128,7 @@ This might be particularly beneficial for the more demanding applications of thi
 The technique described above seems to have been "invented" independently multiple times.
 As far as I can tell, the first to publish this idea were [Dissanayake and Phan-Tien (1994)](https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.1640100303), who were working in the Department of Mechanical Engineering at The University of Sydney.
 They published in Communications in Numerical Methods in Engineering.
-A year or so later, [Milligen et al. (1995)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3594) published virtually the same technique in the prestigious Physical Review Letters.
+A year or so later, [van Milligen et al. (1995)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3594) published virtually the same technique in the prestigious Physical Review Letters.
 These authors appear to have been physicists working on simulations of plasmas in fusion energy devices at the EURATOM-CIEMAT Association for Fusion in Spain, and do not appear to have been aware of the work by Dissanayake and Phan-Tien.
 
 Later, [Lagaris et al. (1997)](https://arxiv.org/abs/physics/9705023) published a slightly different version of this technique.
